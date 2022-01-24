@@ -1,9 +1,12 @@
 import './App.css';
+import ConnectWalletButton from './components/ConnectWalletButton';
 import Header from './components/Header';
 import List from './components/List';
 import Roadmap from './components/roadmap/Roadmap';
 
 function App() {
+
+
   return (
     <div className='App'>
       <Header/>
@@ -14,7 +17,7 @@ function App() {
           <ul className='list'>
             <List items={['Public mint still open at .04 ETH', '20% of proceeds and 3% of secondary sales go&nbsp;to #TeamSeas (benefiting Ocean Conservancy and The Ocean Cleanup)']}></List>
           </ul>
-          <a href=''>Connect your Wallet to Mint</a>
+          <ConnectWalletButton />
         </div>
       </div>
       <div>
