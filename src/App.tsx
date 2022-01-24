@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/Header';
 import List from './components/List';
+import Roadmap from './components/roadmap/Roadmap';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       </div>
       <div>
         <h1>Seabums Plans &amp; Values</h1>
+        <Roadmap/>
       </div>
     </div>
   );

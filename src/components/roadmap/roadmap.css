@@ -1,0 +1,30 @@
+.number {
+    line-height: 41px;
+    width: 50px;
+    height: 42px;
+    background: #f3e74c;
+    color: black;
+    text-align: center;
+    border-radius: 33px;
+    font-size: 30px;
+}
+
+.roadmap-text {
+    max-width: 500px;
+}
+/* Change this! */
+.space-around {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.roadmap-item-container {
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    margin: 40px 0px;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
