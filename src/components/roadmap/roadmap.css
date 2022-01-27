@@ -23,6 +23,7 @@
     align-items: center;
     display: flex;
     margin: 40px 0px;
+    flex-wrap: wrap;
 }
 
 .reverse {

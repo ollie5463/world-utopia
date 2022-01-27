@@ -1,15 +1,15 @@
 import './App.css';
 import ConnectWalletButton from './components/ConnectWalletButton';
 import Countdown from './components/Countdown';
+import FlickeringNft from './components/flickeringNft/FlickeringNft';
 import Header from './components/Header';
 import List from './components/List';
+// import MeetTheTeam from './components/MeetTheTeam/MeetTheTeam';
 import BurgerMenu from './components/mobile/BurgerMenu';
 import Roadmap from './components/roadmap/Roadmap';
 import SocialMedia from './components/socialMedia/SocialMedia';
 
 function App() {
-
-
   return (
     <div className='App'>
       <div className='flex-box-container'>
@@ -21,17 +21,17 @@ function App() {
         <Countdown/>
         <ConnectWalletButton />
         <SocialMedia />
-        <div className='text'>
-          <h1>Join Seabums to Explore NFTs, Make Friends, and Help the Oceans</h1>
-          <ul className='list'>
-            <List items={['Public mint still open at .04 ETH', '20% of proceeds and 3% of secondary sales go&nbsp;to #TeamSeas (benefiting Ocean Conservancy and The Ocean Cleanup)']}></List>
-          </ul>
+        <div className='text-container'>
+          <h1>Our Vision</h1>
+          <List items={['Public mint still open at .04 ETH', '20% of proceeds and 3% of secondary sales go&nbsp;to #TeamSeas (benefiting Ocean Conservancy and The Ocean Cleanup)']}></List>
         </div>
       </div>
+      <FlickeringNft/>
       <div>
-        <h1>Seabums Plans &amp; Values</h1>
+        <h1>World Utopia roadmap</h1>
         <Roadmap/>
       </div>
+      {/* <MeetTheTeam/> */}
     </div>
   );
 }

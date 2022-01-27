@@ -1,0 +1,1 @@
+export const flickeringTime = 3000;
