@@ -11,9 +11,9 @@ function RoadmapItem (props: Props){
     const classes = classNames('roadmap-item-container', { reverse: props.reverse })
     return (
         <div className={classes} >
-            <div>
+            {/* <div>
                 <img alt={props.src} src={props.src}></img>
-            </div>
+            </div> */}
             <div className='number'>{props.number}</div>
             <div>
                 <p className='roadmap-text'>{props.text}</p>
