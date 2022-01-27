@@ -1,10 +1,11 @@
 import './App.css';
 import ConnectWalletButton from './components/ConnectWalletButton';
 import Countdown from './components/Countdown';
+import FAQs from './components/FAQs/FAQs';
 import FlickeringNft from './components/flickeringNft/FlickeringNft';
 import Header from './components/Header';
 import List from './components/List';
-// import MeetTheTeam from './components/MeetTheTeam/MeetTheTeam';
+import MeetTheTeam from './components/MeetTheTeam/MeetTheTeam';
 import BurgerMenu from './components/mobile/BurgerMenu';
 import Roadmap from './components/roadmap/Roadmap';
 import SocialMedia from './components/socialMedia/SocialMedia';
@@ -31,7 +32,9 @@ function App() {
         <h1>World Utopia roadmap</h1>
         <Roadmap/>
       </div>
-      {/* <MeetTheTeam/> */}
+      <MeetTheTeam/>
+      <FAQs/>
+      <SocialMedia />
     </div>
   );
 }
