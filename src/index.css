@@ -17,14 +17,16 @@ code {
 .Logo {
   width: 200px;
   margin: 20px;
+  flex: 1;
 }
 
 .flex-box-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
-.fish {
+.main-nft {
   max-width: 250px;
   max-height: 250px;
 }
@@ -40,6 +42,7 @@ button {
   padding: 10px;
   border-radius: 12px;
   text-decoration: none;
+  margin: 30px;
 }
 
 a:hover {
@@ -48,4 +51,8 @@ a:hover {
 
 .list {
   margin-bottom: 40px;
+}
+
+.countdown-timer {
+
 }

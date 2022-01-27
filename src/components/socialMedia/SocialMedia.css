@@ -1,0 +1,13 @@
+.social-media-link {
+    max-width: 40px;
+    max-height: 40px;
+    background: white;
+    border-radius: 16px;
+}
+
+.social-media-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 60%;
+    margin: auto;
+}
