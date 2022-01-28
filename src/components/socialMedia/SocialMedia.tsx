@@ -1,11 +1,19 @@
 import './SocialMedia.css';
+import { IconButton } from '@mui/material';
+import { Instagram, Twitter } from '@mui/icons-material';
 
 function SocialMedia() {
     return (
         <div className='social-media-container'>
-            <img className='social-media-link' alt='instagram' src='instagram-icon.png'></img>
-            <img className='social-media-link' alt='instagram' src='twitter-icon.png'></img>
-            <img className='social-media-link' alt='instagram' src='discord-icon.jpg'></img>
+            <IconButton>
+                <Instagram fontSize='large'/>
+            </IconButton>
+            <IconButton>
+                <Twitter fontSize='large'/>
+            </IconButton>
+            <IconButton>
+                <img className='social-media-link' alt='instagram' src='discord-icon.jpg'></img>
+            </IconButton>
         </div>
     )
 }

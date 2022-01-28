@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material';
 import {
     Accordion,
     AccordionItem,
@@ -11,6 +12,8 @@ import 'react-accessible-accordion/dist/fancy-example.css';
 
 function FAQs() {
     return (
+    <>
+        <Typography id='FAQ'>FAQs</Typography>
         <Accordion allowZeroExpanded={true}>
             <AccordionItem>
                 <AccordionItemHeading>
@@ -56,6 +59,7 @@ function FAQs() {
                 </AccordionItemPanel>
             </AccordionItem>
         </Accordion>
+    </>
     );
 }
 

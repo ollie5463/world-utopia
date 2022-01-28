@@ -6,7 +6,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 function MeetTheTeam() {
     return (
         <>
-            <h1>Meet the team!</h1>
+            <h1 id='TheTeam'>Meet the team!</h1>
             <Carousel showArrows={false}>
                 <div>
                     <img className='team-profile-image' alt='ollie' src="https://global-uploads.webflow.com/6187b67bc438f36537f3ec15/6193476a64b7ed0f2f0bd0f4_Untitled-1.png" />

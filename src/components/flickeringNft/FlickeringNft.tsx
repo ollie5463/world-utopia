@@ -33,7 +33,7 @@ function FlickeringNft() {
 
     return (
     <>
-        <img alt='nft' src={images[imageIndex].src}></img>
+        <img id='Rarity' alt='nft' src={images[imageIndex].src}></img>
         <h3>{images[imageIndex].rarity}</h3>
     </>
     )

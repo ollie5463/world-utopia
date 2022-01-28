@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'react';
 import { ethers } from 'ethers';
 import MetaMaskOnboarding from '@metamask/onboarding';
+import { Button } from '@mui/material';
 
 function ConnectWalletButton() {
 
@@ -35,7 +36,7 @@ function ConnectWalletButton() {
     };
 
     return (
-        <button onClick={isWalletConnected ? mintNFTProps.onClick : connectMaskProps.onClick} >{isWalletConnected? mintNFTProps.text : connectMaskProps.text}</button>   
+        <Button id='Minting' className='wallet-button' variant="contained" onClick={isWalletConnected ? mintNFTProps.onClick : connectMaskProps.onClick} >{isWalletConnected? mintNFTProps.text : connectMaskProps.text}</Button>   
     )
 }
 

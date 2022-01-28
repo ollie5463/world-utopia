@@ -36,14 +36,18 @@ code {
   max-width: 500px;
 }
 
-button {
+/* button {
   background-color: #00a487;
   color: white;
   padding: 10px;
   border-radius: 12px;
   text-decoration: none;
   margin: 30px;
-}
+} */
+ .wallet-button {
+    /* margin: 0 20%; */
+    max-width: 287px;
+ }
 
 a:hover {
   background-color: #0fe9ab;
@@ -52,8 +56,4 @@ a:hover {
 .list {
   margin-bottom: 40px;
   padding: 0 36px;
-}
-
-.countdown-timer {
-
 }

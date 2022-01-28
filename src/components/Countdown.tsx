@@ -1,5 +1,7 @@
+import { Typography } from '@mui/material';
+
 function Countdown() {
-    return <h2 className='countdown-timer'>10 days left!</h2>
+    return <Typography variant='h2'>10 days left!</Typography>
 }
 
 export default Countdown;
