@@ -1,4 +1,4 @@
-import { createTheme, ThemeProvider, useTheme } from '@mui/material/styles';
+import { ThemeProvider, useTheme } from '@mui/material/styles';
 import { useState } from 'react';
 import './App.css';
 import FAQs from './components/FAQs/FAQs';
@@ -11,12 +11,13 @@ import SocialMedia from './components/socialMedia/SocialMedia';
 import MintYourNftMobile from './components/mintYourNft/mobile/MintYourNft';
 import MintYourNft from './components/mintYourNft/MintYourNft';
 import OurVision from './components/ourVision/OurVision';
+import RarityScale from './components/RarityScale/RarityScale';
 import { Container } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 const useStyles: any = makeStyles((theme: any) => ({
-  myContainer: {
-      maxWidth: '1000px !important'
+  widthRestrictionContainer: {
+      maxWidth: '1250px !important'
   }
 }));
 
@@ -26,15 +27,14 @@ function App() {
   const classes = useStyles();
 
   const theme = useTheme() as any;
-  console.log(theme)
 
   return (
     <ThemeProvider theme={theme}>
-      <Container className={classes.myContainer}>
+      <Container className={classes.widthRestrictionContainer}>
         {isDesktop ? <Menu/> : <MobileMenu/> }
         {isDesktop ? <MintYourNft /> : <MintYourNftMobile /> }
         <OurVision />
-        <FlickeringNft/>
+        {isDesktop ? <RarityScale /> : <FlickeringNft/>}
         <Roadmap/>
         <MeetTheTeam/>
         <FAQs/>

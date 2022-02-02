@@ -7,7 +7,10 @@ import SocialMedia from "../socialMedia/SocialMedia";
 const useStyles: any = makeStyles((theme: any) => ({
     mainNft: {
         'max-width': '250px',
-        'max-height': '250px'
+        'max-height': '250px',
+        'min-width': '250px',
+        'min-height': '250px',
+        overflow: 'hidden'
     },
     welcome: {
         'font-size': '40px !important',
@@ -16,17 +19,20 @@ const useStyles: any = makeStyles((theme: any) => ({
     },
     container: {
         display: 'flex !important',
-        justifyContent: 'space-around'
+        justifyContent: 'space-around',
+        margin: '20px 0'
     },
     innerContainer: {
         display: 'flex !important',
         flexDirection: 'column',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        margin: '20px 0'
     }, 
     countdownContainer: {
         display: 'flex !important',
         flexDirection: 'column',
-        alignItems: 'center'
+        alignItems: 'center',
+        margin: '20px 0'
     }
 }));
 
