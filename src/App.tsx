@@ -1,4 +1,5 @@
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeProvider, useTheme } from '@mui/material/styles';
+import { useState } from 'react';
 import './App.css';
 import ConnectWalletButton from './components/ConnectWalletButton';
 import Countdown from './components/Countdown';
@@ -7,11 +8,12 @@ import FlickeringNft from './components/flickeringNft/FlickeringNft';
 import Header from './components/Header';
 import List from './components/List';
 import MeetTheTeam from './components/MeetTheTeam/MeetTheTeam';
-import Menu from './components/mobile/Menu/Menu';
+import MobileMenu from './components/mobile/Menu/Menu';
+import Menu from './components/menu/Menu';
 import Roadmap from './components/roadmap/Roadmap';
 import SocialMedia from './components/socialMedia/SocialMedia';
 
-const theme = createTheme();
+const theme = createTheme() as any;
 
 theme.typography.h2 = {
   'font-size': '2rem',
@@ -20,15 +22,20 @@ theme.typography.h2 = {
 
 function App() {
 
+  const [isDesktop, setIsDesktop] = useState(true);
+
+  const theme = useTheme() as any;
+  console.log(theme)
+
   return (
     <ThemeProvider theme={theme}>
       <div className='App'>
-        <div className='flex-box-container'>
-          <Header/>
-           <Menu/>
-        </div>
+        {/* <div className='flex-box-container'> */}
+          {/* <Header/> */}
+          {isDesktop ? <Menu/> : <MobileMenu/> }
+        {/* </div> */}
         <div>
-          <img className='main-nft' alt='fishman' src='https://global-uploads.webflow.com/6187b67bc438f36537f3ec15/61aa284d2be4492575a0d526_Seabums-Character-Small.png' ></img>
+          <img className='main-nft' alt='fishman' src='seabums-nft.png' ></img>
           <Countdown/>
           <ConnectWalletButton />
           <SocialMedia />
@@ -39,7 +46,6 @@ function App() {
         </div>
         <FlickeringNft/>
         <div>
-          
           <Roadmap/>
         </div>
         <MeetTheTeam/>

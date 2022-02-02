@@ -15,7 +15,8 @@ code {
 }
 
 .Logo {
-  width: 200px;
+  max-width: 200px;
+  max-height: 55px;
   margin: 20px;
   flex: 1;
 }
@@ -23,7 +24,12 @@ code {
 .flex-box-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  /* // desktop only */
+  flex-wrap: nowrap;
+}
+/* // desktop only */
+@media screen { 
+  
 }
 
 .main-nft {

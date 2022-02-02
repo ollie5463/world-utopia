@@ -9,7 +9,7 @@ type ListProps = {
 function List(props: ListProps) {
   return (
     <ul className='list'>
-        {props.items.map((item) => <li><p>{item}</p></li>)}
+        {props.items.map((item) => <li key={item}><p>{item}</p></li>)}
         <li>
             <p>Public mint still open at .04 ETH</p>
         </li>
