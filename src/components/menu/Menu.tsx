@@ -22,7 +22,8 @@ const useStyles:any = makeStyles((theme: any) => ({
             fontSize: '30px',
             [theme.breakpoints.down('lg')]: {
                 fontSize: '20px'
-            }
+            },
+            whiteSpace:'nowrap'
         }
     }
 }))

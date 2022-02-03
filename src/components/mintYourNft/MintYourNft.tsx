@@ -13,9 +13,9 @@ const useStyles: any = makeStyles((theme: any) => ({
         overflow: 'hidden'
     },
     welcome: {
-        'font-size': '40px !important',
+        // 'font-size': '40px !important',
         minWidth: '300px',
-        fontWeight: 'bold !important'
+        // fontWeight: 'bold !important'
     },
     container: {
         display: 'flex !important',

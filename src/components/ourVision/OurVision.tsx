@@ -5,24 +5,32 @@ import VisionList from '../VisionList';
 
 const useStyles: any = makeStyles((theme: any) => ({
     ourVision: {
-        fontWeight: 'bold !important',
-        fontSize: '30px !important',
         textAlign: 'center',
         padding: '12px'
     },
     ourVisionContainer: {
+        display: 'flex !important',
         marginLeft: '0 !important',
-        maxWidth: '450px !important',
         margin: '20px 0'
     },
     innerContainer: {
+        maxWidth: '450px !important',
         padding: '0 !important',
         background: 'darkblue',
         borderRadius: '34px'
+    },
+    visionItemsContainer: {
+        display: 'flex !important',
+        flexWrap: 'nowrap',
+        flexDirection: 'column'
     }
 }));
 
-function OurVision() {
+type Props = {
+    isDesktop: boolean
+}
+
+function OurVision({ isDesktop }: Props) {
     const classes = useStyles();
 
     return (
@@ -37,9 +45,18 @@ function OurVision() {
                         '20% of proceeds and 3% of secondary sales go&nbsp;to #TeamSeas (benefiting Ocean Conservancy and The Ocean Cleanup)',
                         'Public mint still open at .04 ETH', 
                         '20% of proceeds and 3% of secondary sales go&nbsp;to #TeamSeas (benefiting Ocean Conservancy and The Ocean Cleanup)'
-                        ]} />
+                    ]} />
                 </Container>
-                <OurVisionFacts/>
+                <Container className={classes.visionItemsContainer}>
+                {isDesktop && 
+                    <OurVisionFacts facts={[
+                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+                        'aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                        'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint',
+                        'occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
+                    ]}/>
+                }
+                </Container>
             </Container>
         </>
     )
