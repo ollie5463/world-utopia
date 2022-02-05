@@ -11,7 +11,7 @@ const useStyles: any = makeStyles((theme: any) => ({
     ourVisionContainer: {
         display: 'flex !important',
         marginLeft: '0 !important',
-        margin: '20px 0'
+        margin: '60px 0'
     },
     innerContainer: {
         maxWidth: '450px !important',
@@ -22,7 +22,9 @@ const useStyles: any = makeStyles((theme: any) => ({
     visionItemsContainer: {
         display: 'flex !important',
         flexWrap: 'nowrap',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        maxWidth: '465px !important',
+        minWidth: '465px !important'
     }
 }));
 
@@ -37,7 +39,7 @@ function OurVision({ isDesktop }: Props) {
         <>
             <Container className={classes.ourVisionContainer}>
                 <Container className={classes.innerContainer}>
-                    <Typography className={classes.ourVision} variant='h2'>
+                    <Typography id='Vision' className={classes.ourVision} variant='h2'>
                         Our Vision
                     </Typography>
                     <VisionList items={[

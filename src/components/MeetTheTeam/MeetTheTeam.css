@@ -9,3 +9,9 @@
 .team-profile {
     margin: 35px;
 }
+.meet-the-team-img {
+    display: flex;
+    flex-direction: column-reverse;
+    max-height: 250px;
+    max-width: 250px;
+}

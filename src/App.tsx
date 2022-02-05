@@ -47,7 +47,7 @@ function App() {
         <OurVision isDesktop={isDesktop} />
         {isDesktop ? <RarityScale /> : <FlickeringNft/>}
         <Roadmap/>
-        <MeetTheTeam/>
+        <MeetTheTeam isDesktop={isDesktop}/>
         <FAQs/>
         <SocialMedia />
       </Container>

@@ -1,10 +1,16 @@
-import { Container, ImageList, ImageListItem } from '@mui/material';
+import { Container, ImageList, ImageListItem, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 const useStyles: any = makeStyles((theme: any) => ({
     rarityArrow: {
         width: '100%',
         height: '20px'
+    },
+    rarityContainer: {
+        margin: '60px 0 !important'
+    },
+    rarityTitle: {
+        textAlign: 'center'
     }
   }));
 
@@ -25,7 +31,8 @@ const itemList: {rarity: string, src: string}[] = [{
 function RarityScale() {
     const classes = useStyles();
     return (
-        <Container>
+        <Container className={classes.rarityContainer}>
+            <Typography className={classes.rarityTitle} id='Rarity' variant='h2' >Rarity Scale</Typography>
             <ImageList cols={itemList.length}>
                 {
                     itemList.map(({rarity, src}) => (

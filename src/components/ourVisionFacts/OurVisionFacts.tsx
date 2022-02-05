@@ -10,7 +10,7 @@ const useStyles: any = makeStyles(({
         background: 'darkblue',
         borderRadius: '34px',
         maxWidth: '200px !important',
-        padding: '12px !important'
+        padding: '20px !important'
     }
 }));
 

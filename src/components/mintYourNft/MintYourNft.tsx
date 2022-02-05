@@ -20,7 +20,7 @@ const useStyles: any = makeStyles((theme: any) => ({
     container: {
         display: 'flex !important',
         justifyContent: 'space-around',
-        margin: '20px 0'
+        margin: '60px 0'
     },
     innerContainer: {
         display: 'flex !important',

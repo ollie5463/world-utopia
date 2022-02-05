@@ -1,4 +1,5 @@
 import { Typography } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import {
     Accordion,
     AccordionItem,
@@ -10,10 +11,17 @@ import {
 // Demo styles, see 'Styles' section below for some notes on use.
 import 'react-accessible-accordion/dist/fancy-example.css';
 
+const useStyles: any = makeStyles((theme: any) => ({
+    heading: {
+        textAlign: 'center'
+    }
+  }));
+
 function FAQs() {
+    const classes = useStyles();
     return (
     <>
-        <Typography id='FAQ'>FAQs</Typography>
+        <Typography className={classes.heading} variant='h2' id='FAQ'>FAQs</Typography>
         <Accordion allowZeroExpanded={true}>
             <AccordionItem>
                 <AccordionItemHeading>
