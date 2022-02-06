@@ -7,7 +7,7 @@ type Props = {
 
 const useStyles: any = makeStyles(({
     fact: {
-        background: 'darkblue',
+        background: '#FF9D9D',
         borderRadius: '34px',
         maxWidth: '200px !important',
         padding: '20px !important'

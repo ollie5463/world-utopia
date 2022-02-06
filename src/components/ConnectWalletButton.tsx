@@ -8,6 +8,7 @@ const useStyles: any = makeStyles((theme: any) => ({
     connectWallet: {
         margin: '10px 0 !important',
         maxWidth: '287px'
+        // background: '#FF9D9D'
     }
 }));
 

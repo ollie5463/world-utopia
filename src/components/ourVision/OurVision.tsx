@@ -11,12 +11,12 @@ const useStyles: any = makeStyles((theme: any) => ({
     ourVisionContainer: {
         display: 'flex !important',
         marginLeft: '0 !important',
-        margin: '60px 0'
+        margin: '100px 0'
     },
     innerContainer: {
         maxWidth: '450px !important',
         padding: '0 !important',
-        background: 'darkblue',
+        background: '#FF9D9D',
         borderRadius: '34px'
     },
     visionItemsContainer: {

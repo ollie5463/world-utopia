@@ -27,7 +27,7 @@ const useStyles: any = makeStyles((theme: any) => ({
         maxWidth: '400px'
     },
     roadMapContainer: {
-        margin: '60px 0 !important',
+        margin: '100px 0 !important',
         minWidth: '1100px !important',
         maxWidth: '1100px !important'
     }

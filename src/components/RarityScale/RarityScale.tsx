@@ -7,7 +7,7 @@ const useStyles: any = makeStyles((theme: any) => ({
         height: '20px'
     },
     rarityContainer: {
-        margin: '60px 0 !important'
+        margin: '100px 0 !important'
     },
     rarityTitle: {
         textAlign: 'center'

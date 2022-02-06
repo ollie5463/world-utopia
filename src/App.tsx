@@ -23,6 +23,7 @@ const useStyles: any = makeStyles((theme: any) => ({
 
 const theme = createTheme({
     typography: {
+      fontFamily: 'Candal, sans-serif;',
       h1: {
         fontSize: '40px',
         fontWeight: 'bold'
@@ -31,11 +32,27 @@ const theme = createTheme({
         fontSize: '30px',
         fontWeight: 'bold'
       }
+    },
+    palette: {
+      primary: {
+        light: '#FF9D9D',
+        main: '#FF9D9D',
+        dark: '#FF9D9D',
+        contrastText: '#FFFFF'
+      },
+      secondary: {
+        light: '#FF9D9D',
+        main: '#FF9D9D',
+        dark: '#FF9D9D',
+        contrastText: '#FFFFF'
+
+      }
     }
 })
 
 function App() {
 
+  console.log(theme)
   const [isDesktop, setIsDesktop] = useState(true);
   const classes = useStyles();
 

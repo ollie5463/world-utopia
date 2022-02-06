@@ -12,7 +12,7 @@ type Item = {
 const useStyles: any = makeStyles((theme: any) => ({
     meetTheTeamTitle: {
         textAlign: 'center',
-        margin: '60px 0'
+        margin: '100px 0'
     },
     itemContainer: {
         display: 'flex !important',
@@ -27,7 +27,7 @@ const useStyles: any = makeStyles((theme: any) => ({
         display: 'flex !important',
         flexDirection: 'column',
         maxWidth: 'none !important',
-        margin: '60px 0'
+        margin: '100px 0'
     },
     innerContainer: {
         display: 'flex !important',

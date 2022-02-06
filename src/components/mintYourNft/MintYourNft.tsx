@@ -20,7 +20,7 @@ const useStyles: any = makeStyles((theme: any) => ({
     container: {
         display: 'flex !important',
         justifyContent: 'space-around',
-        margin: '60px 0'
+        margin: '100px 0'
     },
     innerContainer: {
         display: 'flex !important',
@@ -45,6 +45,7 @@ function MintYourNft() {
                     <Typography className={classes.welcome} variant='h1'>Welcome to World Utopia!</Typography>
                     <SocialMedia />
                 </Container>
+                {/* <img src={svg} alt="nft logo"></img> */}
                 <img className={classes.mainNft} alt='fish nft' src='seabums-nft.png' ></img>
             </Container>
             <Container className={classes.countdownContainer}>
