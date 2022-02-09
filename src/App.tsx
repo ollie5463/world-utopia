@@ -12,7 +12,7 @@ import MintYourNftMobile from './components/mintYourNft/mobile/MintYourNft';
 import MintYourNft from './components/mintYourNft/MintYourNft';
 import OurVision from './components/ourVision/OurVision';
 import RarityScale from './components/RarityScale/RarityScale';
-import { Container, createTheme } from '@mui/material';
+import { Container, createTheme, Grid } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 const useStyles: any = makeStyles((theme: any) => ({
@@ -58,7 +58,9 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container className={classes.widthRestrictionContainer}>
+      <Grid > 
+        {/* className={classes.widthRestrictionContainer}> */}
+        {/* change to mobile menu when below certain width??????????? */}
         {isDesktop ? <Menu/> : <MobileMenu/> }
         {isDesktop ? <MintYourNft /> : <MintYourNftMobile /> }
         <OurVision isDesktop={isDesktop} />
@@ -67,7 +69,7 @@ function App() {
         <MeetTheTeam isDesktop={isDesktop}/>
         <FAQs/>
         <SocialMedia />
-      </Container>
+      </Grid>
     </ThemeProvider>
   );
 }

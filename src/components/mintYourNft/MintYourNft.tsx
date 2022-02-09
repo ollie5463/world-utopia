@@ -1,4 +1,4 @@
-import { Container, Typography } from "@mui/material";
+import { Container, Typography, Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import ConnectWalletButton from "../ConnectWalletButton";
 import Countdown from "../Countdown";
@@ -40,18 +40,18 @@ function MintYourNft() {
     const classes = useStyles();
     return (
         <>  
-            <Container className={classes.container}>
+            <Grid className={classes.container}>
                 <Container className={classes.innerContainer}>
                     <Typography className={classes.welcome} variant='h1'>Welcome to World Utopia!</Typography>
                     <SocialMedia />
                 </Container>
                 {/* <img src={svg} alt="nft logo"></img> */}
                 <img className={classes.mainNft} alt='fish nft' src='seabums-nft.png' ></img>
-            </Container>
-            <Container className={classes.countdownContainer}>
+            </Grid>
+            <Grid direction="column" className={classes.countdownContainer}>
                 <Countdown/>
                 <ConnectWalletButton />
-            </Container>
+            </Grid>
         </>
     )
 }

@@ -1,4 +1,4 @@
-import { List, ListItem, ListItemButton, ListItemText } from "@mui/material";
+import { List, ListItem, ListItemButton, ListItemText, Grid } from "@mui/material";
 import Header from '../Header';
 import { makeStyles } from '@mui/styles';
 
@@ -6,14 +6,9 @@ const useStyles:any = makeStyles((theme: any) => ({
     desktopMenu: {
         display: 'flex'
     },
-    container: {
-        display: 'flex',
-        'justify-content': 'center',
-        'flex-wrap': 'nowrap'
-    }, 
     listItem: {
-        [theme.breakpoints.down('lg')]: {
-            padding: '0px !important'
+        [theme.breakpoints.down('xl')]: {
+            padding: '4px 4px !important'
         }
     },
     listItemText:{
@@ -21,7 +16,7 @@ const useStyles:any = makeStyles((theme: any) => ({
             fontWeight: 'bold !important',
             fontSize: '30px',
             [theme.breakpoints.down('lg')]: {
-                fontSize: '20px'
+                fontSize: '25px'
             },
             whiteSpace:'nowrap'
         }
@@ -31,9 +26,11 @@ const useStyles:any = makeStyles((theme: any) => ({
 function Menu() {
     const classes = useStyles();
     return (
-        <div className={classes.container}>
-            <Header/>
+        <Grid>
             <List className={classes.desktopMenu}>
+                <ListItem className={classes.listItem} key='minting'>
+                    <Header/>
+                </ListItem>
                 <ListItem className={classes.listItem} key='minting'>
                 <ListItemButton  component='a' href='#Minting' sx={{ 'text-align': 'center' }} key='Minting'>
                     <ListItemText className={classes.listItemText} primary='Minting' />
@@ -65,7 +62,7 @@ function Menu() {
                     </ListItemButton>
                 </ListItem>
             </List>
-        </div>
+        </Grid>
     )
 }
 

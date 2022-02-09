@@ -28,8 +28,8 @@ const useStyles: any = makeStyles((theme: any) => ({
     },
     roadMapContainer: {
         margin: '100px 0 !important',
-        minWidth: '1100px !important',
-        maxWidth: '1100px !important'
+        // minWidth: '1100px !important',
+        // maxWidth: '1100px !important'
     }
   }));
 
