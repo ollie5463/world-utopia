@@ -53,7 +53,7 @@ const theme = createTheme({
 function App() {
 
   console.log(theme)
-  const [isDesktop, setIsDesktop] = useState(true);
+  const [isDesktop, setIsDesktop] = useState(false);
   const classes = useStyles();
 
   return (

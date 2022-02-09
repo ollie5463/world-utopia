@@ -9,6 +9,9 @@ const useStyles:any = makeStyles((theme: any) => ({
     listItem: {
         [theme.breakpoints.down('xl')]: {
             padding: '4px 4px !important'
+        },
+        [theme.breakpoints.down('lg')]: {
+            padding: '0 !important'
         }
     },
     listItemText:{
@@ -16,7 +19,10 @@ const useStyles:any = makeStyles((theme: any) => ({
             fontWeight: 'bold !important',
             fontSize: '30px',
             [theme.breakpoints.down('lg')]: {
-                fontSize: '25px'
+                fontSize: '20px'
+            },
+            [theme.breakpoints.down('md')]: {
+                fontSize: '15px'
             },
             whiteSpace:'nowrap'
         }
@@ -28,7 +34,7 @@ function Menu() {
     return (
         <Grid>
             <List className={classes.desktopMenu}>
-                <ListItem className={classes.listItem} key='minting'>
+                <ListItem className={classes.listItem} key='world utopia'>
                     <Header/>
                 </ListItem>
                 <ListItem className={classes.listItem} key='minting'>

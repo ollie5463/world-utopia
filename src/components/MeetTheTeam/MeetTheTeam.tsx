@@ -1,7 +1,7 @@
 import './MeetTheTeam.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { makeStyles } from "@mui/styles";
-import { Container, Typography } from '@mui/material';
+import { Container, Typography, Grid } from '@mui/material';
 import Carousel from 'react-material-ui-carousel'
 
 type Item = {
@@ -12,36 +12,38 @@ type Item = {
 const useStyles: any = makeStyles((theme: any) => ({
     meetTheTeamTitle: {
         textAlign: 'center',
-        margin: '100px 0'
+        margin: '100px 0 !important'
     },
     itemContainer: {
         display: 'flex !important',
         flexDirection: 'column-reverse',
-        maxHeight: '250px',
-        maxWidth: '250px'
+        // maxHeight: '250px',
+        // maxWidth: '250px',
+        // padding: '0'
     },
     caption: {
         textAlign: 'center'
     },
     outerContainer: {
         display: 'flex !important',
-        flexDirection: 'column',
         maxWidth: 'none !important',
         margin: '100px 0'
     },
     innerContainer: {
         display: 'flex !important',
-        // flexWrap: 'wrap',
         maxWidth: 'none !important'
+    },
+    teamGrid: {
+        justifyContent: 'center'
     }
   }));
 
 const getItemCarouselItem = (name: string, image: string, classes: any) => {
     return (
-        <Container className={classes.itemContainer}>
+        <Grid flexDirection='column-reverse' className={classes.itemContainer}>
             <Typography className={classes.caption} variant='caption'>{name}</Typography>
             <img style={{ maxHeight: '250px', maxWidth: '250px' }}src={image} alt={name} />
-        </Container>
+        </Grid>
     )
 }
 
@@ -66,21 +68,21 @@ function MeetTheTeam({ isDesktop }: {isDesktop: boolean}) {
     }]
 
     return (
-        <Container className={classes.outerContainer}>
+        <Grid flexDirection='column' className={classes.outerContainer}>
             <Typography className={classes.meetTheTeamTitle} variant='h2' id='TheTeam'>Meet the team!</Typography>
             {!isDesktop && <Carousel>
                 {items.map((itemProps) => 
                     getItemCarouselItem(itemProps.name, itemProps.image, classes)
                 )}
             </Carousel>}
-            <Container className={classes.innerContainer}>
+            <Grid className={classes.teamGrid} container>
                 {isDesktop && 
                     items.map((itemProps) => 
                         getItemCarouselItem(itemProps.name, itemProps.image, classes)    
                     )
                 }
-            </Container>
-        </Container>
+            </Grid>
+        </Grid>
     )
 }
 

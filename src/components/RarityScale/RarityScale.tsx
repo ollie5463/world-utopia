@@ -1,4 +1,4 @@
-import { Container, ImageList, ImageListItem, Typography } from '@mui/material';
+import { Grid, ImageList, ImageListItem, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 const useStyles: any = makeStyles((theme: any) => ({
@@ -11,6 +11,9 @@ const useStyles: any = makeStyles((theme: any) => ({
     },
     rarityTitle: {
         textAlign: 'center'
+    },
+    rarityImage: {
+        alignItems: 'center'
     }
   }));
 
@@ -31,13 +34,14 @@ const itemList: {rarity: string, src: string}[] = [{
 function RarityScale() {
     const classes = useStyles();
     return (
-        <Container className={classes.rarityContainer}>
+        <Grid className={classes.rarityContainer}>
             <Typography className={classes.rarityTitle} id='Rarity' variant='h2' >Rarity Scale</Typography>
-            <ImageList cols={itemList.length}>
+            <ImageList className={classes.rarityImage} cols={itemList.length}>
                 {
                     itemList.map(({rarity, src}) => (
-                        <ImageListItem key={rarity + ' nft'}>
+                        <ImageListItem className={classes.rarityImage} key={rarity + ' nft'}>
                             <img
+                                style={{ maxWidth: '300px', maxHeight: '300px' }}
                                 src={src}
                                 alt={rarity + ' nft'}
                                 loading="lazy"
@@ -47,7 +51,7 @@ function RarityScale() {
                 }
             </ImageList>
             <img className={classes.rarityArrow} src='arrows.png' alt='nft rarity meter' />
-        </Container>
+        </Grid>
 
     )
 }

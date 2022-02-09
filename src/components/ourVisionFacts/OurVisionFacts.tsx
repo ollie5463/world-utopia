@@ -1,4 +1,4 @@
-import { Container } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 type Props = {
@@ -22,7 +22,9 @@ function OurVisionFacts({ facts }: Props) {
     <>
         {facts.map((item, index) => {
             const isOdd = index % 2;
-            return<Container sx={{ marginLeft: isOdd ? 0 : 'auto', marginRight: isOdd ? 'auto' : 0 }} className={classes.fact}>{item}</Container>
+            return <Container sx={{ marginLeft: isOdd ? 0 : 'auto', marginRight: isOdd ? 'auto' : 0 }} className={classes.fact}>
+                    <Typography variant='body1'>{item}</Typography>
+                </Container>
         }
         )}
     </>

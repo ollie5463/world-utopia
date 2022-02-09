@@ -1,10 +1,10 @@
 import '../App.css';
 import svg from './worldUtopiaLogo.svg';
 
-function Header() {
+function Header(styles: any) {
   return (
     <>
-       <img className='Logo' src={svg} alt='nft logo'></img>
+       <img style={styles} className='Logo' src={svg} alt='nft logo'></img>
     </>
   );
 }

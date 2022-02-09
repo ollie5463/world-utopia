@@ -1,8 +1,20 @@
-import { Box, Button, Drawer, List, ListItem, ListItemText, Divider, ListItemButton } from "@mui/material";
+import { Box, Button, Drawer, List, ListItem, ListItemText, Divider, ListItemButton, Grid } from "@mui/material";
 import { Menu as MenuIcon} from '@mui/icons-material';
 import { useState } from "react";
+import { makeStyles } from '@mui/styles';
+import Header from '../../Header';
+
+const useStyles:any = makeStyles((theme: any) => ({
+    menuButton: {
+        flexGrow: 3
+    },
+    logoContainer: {
+        flexGrow: 4
+    }
+}))
 
 function Menu() {
+    const classes = useStyles();
     const [state, setState] = useState(false)
 
     const toggleDrawer = (open: any) => (event: any) => {
@@ -71,10 +83,17 @@ function Menu() {
     )
 
     return (
-    <>
-        <Button onClick={toggleDrawer(true)}>
-            <MenuIcon fontSize='large'/>
-        </Button>
+    <Grid display='flex' flexDirection='row-reverse' rowSpacing={1}>
+        {/* <Grid item spacing={2}> */}
+        <Grid className={classes.logoContainer} >
+            <Header styles={{ flex: 1 }}/>
+        </Grid>
+        {/* </Grid> */}
+        {/* <Grid item spacing={1}> */}
+            <Button className={classes.menuButton} onClick={toggleDrawer(true)}>
+                <MenuIcon fontSize='large'/>
+            </Button>
+        {/* </Grid> */}
         <Drawer
             anchor='right'
             open={state}
@@ -82,7 +101,7 @@ function Menu() {
         >
             {list()}
         </Drawer>
-    </>
+    </Grid>
     )
 }
 
