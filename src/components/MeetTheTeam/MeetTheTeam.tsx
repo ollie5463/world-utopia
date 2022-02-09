@@ -1,31 +1,88 @@
-import { Carousel } from 'react-responsive-carousel';
 import './MeetTheTeam.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { makeStyles } from "@mui/styles";
+import { Container, Typography, Grid } from '@mui/material';
+import Carousel from 'react-material-ui-carousel'
 
+type Item = {
+    name: string,
+    image: string
+}
 
-function MeetTheTeam() {
+const useStyles: any = makeStyles((theme: any) => ({
+    meetTheTeamTitle: {
+        textAlign: 'center',
+        margin: '100px 0 !important'
+    },
+    itemContainer: {
+        display: 'flex !important',
+        flexDirection: 'column-reverse',
+        // maxHeight: '250px',
+        // maxWidth: '250px',
+        // padding: '0'
+    },
+    caption: {
+        textAlign: 'center'
+    },
+    outerContainer: {
+        display: 'flex !important',
+        maxWidth: 'none !important',
+        margin: '100px 0'
+    },
+    innerContainer: {
+        display: 'flex !important',
+        maxWidth: 'none !important'
+    },
+    teamGrid: {
+        justifyContent: 'center'
+    }
+  }));
+
+const getItemCarouselItem = (name: string, image: string, classes: any) => {
     return (
-        <>
-            <h1 id='TheTeam'>Meet the team!</h1>
-            <Carousel showArrows={false}>
-                <div>
-                    <img className='team-profile-image' alt='ollie' src="https://global-uploads.webflow.com/6187b67bc438f36537f3ec15/6193476a64b7ed0f2f0bd0f4_Untitled-1.png" />
-                    <p className="team-profile">Ollie</p>
-                </div>
-                <div>
-                    <img className='team-profile-image' alt='joe' src='https://global-uploads.webflow.com/6187b67bc438f36537f3ec15/61934af77a6e4037059e5cf8_02.png' />
-                    <p className="team-profile">Joe</p>
-                </div>
-                <div>
-                    <img className='team-profile-image' alt='baiden' src="https://global-uploads.webflow.com/6187b67bc438f36537f3ec15/6193533234b645cee58f1e77_03.png" />
-                    <p className="team-profile">Baiden</p>
-                </div>
-                <div>
-                    <img  className='team-profile-image' alt='lew' src="https://global-uploads.webflow.com/6187b67bc438f36537f3ec15/61935782c4bb830bf46f8818_04.png" />
-                    <p className="team-profile">Lew</p>
-                </div>
-            </Carousel>
-        </>
+        <Grid flexDirection='column-reverse' className={classes.itemContainer}>
+            <Typography className={classes.caption} variant='caption'>{name}</Typography>
+            <img style={{ maxHeight: '250px', maxWidth: '250px' }}src={image} alt={name} />
+        </Grid>
+    )
+}
+
+function MeetTheTeam({ isDesktop }: {isDesktop: boolean}) {
+    const classes = useStyles();
+
+    const items: Item[] = [{
+        name: 'Ollie',
+        image: 'https://global-uploads.webflow.com/6187b67bc438f36537f3ec15/6193476a64b7ed0f2f0bd0f4_Untitled-1.png'
+    }, {
+        name: 'Joe',
+        image: 'https://global-uploads.webflow.com/6187b67bc438f36537f3ec15/61934af77a6e4037059e5cf8_02.png'
+    }, {
+        name: 'Baiden',
+        image: 'https://global-uploads.webflow.com/6187b67bc438f36537f3ec15/6193533234b645cee58f1e77_03.png'
+    }, {
+        name: 'Lew',
+        image: 'https://global-uploads.webflow.com/6187b67bc438f36537f3ec15/61935782c4bb830bf46f8818_04.png'
+    }, {
+        name: 'Max',
+        image: 'https://global-uploads.webflow.com/6187b67bc438f36537f3ec15/61935782c4bb830bf46f8818_04.png'
+    }]
+
+    return (
+        <Grid flexDirection='column' className={classes.outerContainer}>
+            <Typography className={classes.meetTheTeamTitle} variant='h2' id='TheTeam'>Meet the team!</Typography>
+            {!isDesktop && <Carousel>
+                {items.map((itemProps) => 
+                    getItemCarouselItem(itemProps.name, itemProps.image, classes)
+                )}
+            </Carousel>}
+            <Grid className={classes.teamGrid} container>
+                {isDesktop && 
+                    items.map((itemProps) => 
+                        getItemCarouselItem(itemProps.name, itemProps.image, classes)    
+                    )
+                }
+            </Grid>
+        </Grid>
     )
 }
 

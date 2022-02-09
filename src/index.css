@@ -5,7 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: blue;
+  /* background: blue; */
+  background: #1D1D1B;
   color: white;
 }
 
@@ -15,39 +16,26 @@ code {
 }
 
 .Logo {
-  width: 200px;
-  margin: 20px;
+  max-width: 200px;
+  max-height: 100px;
+  padding: 10px 5px;
   flex: 1;
 }
 
 .flex-box-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  /* // desktop only */
+  flex-wrap: nowrap;
 }
-
-.main-nft {
-  max-width: 250px;
-  max-height: 250px;
+/* // desktop only */
+@media screen { 
+  
 }
-
-.text-container {
-  /* padding: 20px; */
-  max-width: 500px;
+.wallet-button {
+  /* margin: 0 20%; */
+  max-width: 287px;
 }
-
-/* button {
-  background-color: #00a487;
-  color: white;
-  padding: 10px;
-  border-radius: 12px;
-  text-decoration: none;
-  margin: 30px;
-} */
- .wallet-button {
-    /* margin: 0 20%; */
-    max-width: 287px;
- }
 
 a:hover {
   background-color: #0fe9ab;

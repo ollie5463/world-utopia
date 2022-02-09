@@ -2,8 +2,18 @@ import { useCallback, useState } from 'react';
 import { ethers } from 'ethers';
 import MetaMaskOnboarding from '@metamask/onboarding';
 import { Button } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+
+const useStyles: any = makeStyles((theme: any) => ({
+    connectWallet: {
+        margin: '10px 0 !important',
+        maxWidth: '287px'
+        // background: '#FF9D9D'
+    }
+}));
 
 function ConnectWalletButton() {
+    const classes = useStyles();
 
     const [isWalletConnected, setIsWalletConnected] = useState(false);
     
@@ -36,7 +46,7 @@ function ConnectWalletButton() {
     };
 
     return (
-        <Button id='Minting' className='wallet-button' variant="contained" onClick={isWalletConnected ? mintNFTProps.onClick : connectMaskProps.onClick} >{isWalletConnected? mintNFTProps.text : connectMaskProps.text}</Button>   
+        <Button id='Minting' className={classes.connectWallet} variant="contained" onClick={isWalletConnected ? mintNFTProps.onClick : connectMaskProps.onClick} >{isWalletConnected? mintNFTProps.text : connectMaskProps.text}</Button>   
     )
 }
 

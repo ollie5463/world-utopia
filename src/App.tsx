@@ -1,51 +1,75 @@
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
+import { useState } from 'react';
 import './App.css';
-import ConnectWalletButton from './components/ConnectWalletButton';
-import Countdown from './components/Countdown';
 import FAQs from './components/FAQs/FAQs';
 import FlickeringNft from './components/flickeringNft/FlickeringNft';
-import Header from './components/Header';
-import List from './components/List';
 import MeetTheTeam from './components/MeetTheTeam/MeetTheTeam';
-import Menu from './components/mobile/Menu/Menu';
+import MobileMenu from './components/mobile/Menu/Menu';
+import Menu from './components/menu/Menu';
 import Roadmap from './components/roadmap/Roadmap';
 import SocialMedia from './components/socialMedia/SocialMedia';
+import MintYourNftMobile from './components/mintYourNft/mobile/MintYourNft';
+import MintYourNft from './components/mintYourNft/MintYourNft';
+import OurVision from './components/ourVision/OurVision';
+import RarityScale from './components/RarityScale/RarityScale';
+import { Container, createTheme, Grid } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 
-const theme = createTheme();
+const useStyles: any = makeStyles((theme: any) => ({
+  widthRestrictionContainer: {
+      maxWidth: '1250px !important'
+  }
+}));
 
-theme.typography.h2 = {
-  'font-size': '2rem',
-  margin: '1.5rem 0'
-}
+const theme = createTheme({
+    typography: {
+      fontFamily: 'Candal, sans-serif;',
+      h1: {
+        fontSize: '40px',
+        fontWeight: 'bold'
+      },
+      h2: {
+        fontSize: '30px',
+        fontWeight: 'bold'
+      }
+    },
+    palette: {
+      primary: {
+        light: '#FF9D9D',
+        main: '#FF9D9D',
+        dark: '#FF9D9D',
+        contrastText: '#FFFFF'
+      },
+      secondary: {
+        light: '#FF9D9D',
+        main: '#FF9D9D',
+        dark: '#FF9D9D',
+        contrastText: '#FFFFF'
+
+      }
+    }
+})
 
 function App() {
 
+  console.log(theme)
+  const [isDesktop, setIsDesktop] = useState(false);
+  const classes = useStyles();
+
   return (
     <ThemeProvider theme={theme}>
-      <div className='App'>
-        <div className='flex-box-container'>
-          <Header/>
-           <Menu/>
-        </div>
-        <div>
-          <img className='main-nft' alt='fishman' src='https://global-uploads.webflow.com/6187b67bc438f36537f3ec15/61aa284d2be4492575a0d526_Seabums-Character-Small.png' ></img>
-          <Countdown/>
-          <ConnectWalletButton />
-          <SocialMedia />
-          <div className='text-container'>
-            <h1 id='Vision'>Our Vision</h1>
-            <List items={['Public mint still open at .04 ETH', '20% of proceeds and 3% of secondary sales go&nbsp;to #TeamSeas (benefiting Ocean Conservancy and The Ocean Cleanup)']}></List>
-          </div>
-        </div>
-        <FlickeringNft/>
-        <div>
-          
-          <Roadmap/>
-        </div>
-        <MeetTheTeam/>
+      <Grid > 
+        {/* className={classes.widthRestrictionContainer}> */}
+        {/* change to mobile menu when below certain width??????????? */}
+        {isDesktop ? <Menu/> : <MobileMenu/> }
+        {isDesktop ? <MintYourNft /> : <MintYourNftMobile /> }
+        <OurVision isDesktop={isDesktop} />
+        {isDesktop ? <RarityScale /> : <FlickeringNft/>}
+        <Roadmap/>
+        <MeetTheTeam isDesktop={isDesktop}/>
         <FAQs/>
         <SocialMedia />
-      </div>
+      </Grid>
     </ThemeProvider>
   );
 }

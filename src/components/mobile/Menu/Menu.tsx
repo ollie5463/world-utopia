@@ -1,8 +1,20 @@
-import { Box, Button, Drawer, List, ListItem, ListItemText, Divider, ListItemButton } from "@mui/material";
+import { Box, Button, Drawer, List, ListItem, ListItemText, Divider, ListItemButton, Grid } from "@mui/material";
 import { Menu as MenuIcon} from '@mui/icons-material';
 import { useState } from "react";
+import { makeStyles } from '@mui/styles';
+import Header from '../../Header';
+
+const useStyles:any = makeStyles((theme: any) => ({
+    menuButton: {
+        flexGrow: 3
+    },
+    logoContainer: {
+        flexGrow: 4
+    }
+}))
 
 function Menu() {
+    const classes = useStyles();
     const [state, setState] = useState(false)
 
     const toggleDrawer = (open: any) => (event: any) => {
@@ -21,7 +33,7 @@ function Menu() {
         onKeyDown={toggleDrawer(false)}
         >
       <List>
-          <ListItem>
+          <ListItem key='minting'>
             <ListItemButton  component='a' href='#Minting' sx={{ 'text-align': 'center' }} key='Minting'>
                 <ListItemText primary='Minting' />
             </ListItemButton>
@@ -29,7 +41,7 @@ function Menu() {
       </List>
       <Divider />
       <List>
-          <ListItem>
+          <ListItem key='vision'>
             <ListItemButton component='a' href='#Vision' sx={{ 'text-align': 'center' }} key='Vision'>
                 <ListItemText primary='Vision' />
             </ListItemButton>
@@ -37,7 +49,7 @@ function Menu() {
       </List>
       <Divider />
       <List>
-          <ListItem>
+          <ListItem key='rarity'>
             <ListItemButton component='a' href='#Rarity' sx={{ 'text-align': 'center' }} key='Rarity'>
                 <ListItemText primary='Rarity' />
             </ListItemButton>
@@ -45,7 +57,7 @@ function Menu() {
       </List>
       <Divider />
       <List>
-            <ListItem>
+            <ListItem key='roadmap'>
                 <ListItemButton component='a' href='#Roadmap' sx={{ 'text-align': 'center' }} key='Roadmap'>
                     <ListItemText primary='Roadmap' />
                 </ListItemButton>  
@@ -53,7 +65,7 @@ function Menu() {
       </List>
       <Divider />
       <List>
-          <ListItem>
+          <ListItem key='the team'>
             <ListItemButton component='a' href='#TheTeam' sx={{ 'text-align': 'center' }} key='The Team'>
                 <ListItemText primary='The Team' />
             </ListItemButton>
@@ -61,7 +73,7 @@ function Menu() {
       </List>
       <Divider />
       <List>
-          <ListItem>
+          <ListItem key='faq'>
             <ListItemButton component='a' href='#FAQ' sx={{ 'text-align': 'center' }} key='FAQ'>
                 <ListItemText primary='FAQ' />
             </ListItemButton>
@@ -71,10 +83,17 @@ function Menu() {
     )
 
     return (
-    <>
-        <Button onClick={toggleDrawer(true)}>
-            <MenuIcon fontSize='large'/>
-        </Button>
+    <Grid display='flex' flexDirection='row-reverse' rowSpacing={1}>
+        {/* <Grid item spacing={2}> */}
+        <Grid className={classes.logoContainer} >
+            <Header styles={{ flex: 1 }}/>
+        </Grid>
+        {/* </Grid> */}
+        {/* <Grid item spacing={1}> */}
+            <Button className={classes.menuButton} onClick={toggleDrawer(true)}>
+                <MenuIcon fontSize='large'/>
+            </Button>
+        {/* </Grid> */}
         <Drawer
             anchor='right'
             open={state}
@@ -82,7 +101,7 @@ function Menu() {
         >
             {list()}
         </Drawer>
-    </>
+    </Grid>
     )
 }
 
