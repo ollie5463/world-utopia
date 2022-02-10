@@ -1,6 +1,9 @@
 import { ThemeProvider } from '@mui/material/styles';
+import { createTheme, Grid } from '@mui/material';
 import { useState } from 'react';
+import MobileDetect from 'mobile-detect';
 import './App.css';
+
 import FAQs from './components/FAQs/FAQs';
 import FlickeringNft from './components/flickeringNft/FlickeringNft';
 import MeetTheTeam from './components/MeetTheTeam/MeetTheTeam';
@@ -12,7 +15,6 @@ import MintYourNftMobile from './components/mintYourNft/mobile/MintYourNft';
 import MintYourNft from './components/mintYourNft/MintYourNft';
 import OurVision from './components/ourVision/OurVision';
 import RarityScale from './components/RarityScale/RarityScale';
-import { createTheme, Grid } from '@mui/material';
 import ContentWrapper from './components/ContentWrapper';
 
 
@@ -26,13 +28,18 @@ const theme = (createTheme as any)({
       h2: {
         fontSize: '30px',
         fontWeight: 'bold'
+      },
+      h3: {
+        fontSize: '25px',
+        fontWeight: 'bold'
       }
     },
     breakpoints: {
       values: {
         roadMapMaxWidthDesktop: 1110,
+        roadMapMobile: 580,
         mobileMenuMaxWidth: 765,
-        contentWrapperMaxWidth: 1400,
+        contentWrapperMaxWidth: 1455,
         xs: 0,
         sm: 600,
         md: 900,
@@ -55,12 +62,12 @@ const theme = (createTheme as any)({
 
       }
     }
-})
+});
+const md = new MobileDetect(window.navigator.userAgent);
 
 function App() {
 
-  console.log(theme)
-  const [isDesktop, setIsDesktop] = useState(true);
+  const [isDesktop] = useState(!md.phone() && !md.tablet);
 
   return (
     <ThemeProvider theme={theme}>

@@ -1,7 +1,6 @@
 import './MeetTheTeam.css';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { makeStyles } from "@mui/styles";
-import { Container, Typography, Grid } from '@mui/material';
+import { Typography, Grid } from '@mui/material';
 import Carousel from 'react-material-ui-carousel'
 
 type Item = {
@@ -37,7 +36,7 @@ const useStyles: any = makeStyles((theme: any) => ({
 
 const getItemCarouselItem = (name: string, image: string, classes: any) => {
     return (
-        <Grid flexDirection='column-reverse' className={classes.itemContainer}>
+        <Grid key={name} flexDirection='column-reverse' className={classes.itemContainer}>
             <Typography className={classes.caption} variant='caption'>{name}</Typography>
             <img style={{ maxHeight: '250px', maxWidth: '250px' }}src={image} alt={name} />
         </Grid>

@@ -22,7 +22,10 @@ const useStyles: any = makeStyles((theme: any) => ({
         padding: '0 !important',
         background: '#FF9D9D',
         borderRadius: '34px',
-        margin: 0
+        margin: 0,
+        [theme.breakpoints.down('md')]: {
+            margin: 'auto'
+        }
     },
     visionItemsContainer: {
         display: 'flex !important',
@@ -30,7 +33,7 @@ const useStyles: any = makeStyles((theme: any) => ({
         paddingRight: '0px',
         margin: 0,
         [theme.breakpoints.down('md')]: {
-            margin: '50px 0',
+            margin: '50px auto',
             maxWidth: '600px !important',
             padding: '0 !important'
         },
