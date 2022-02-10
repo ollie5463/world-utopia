@@ -39,7 +39,7 @@ function Menu() {
         >
       <List>
           <ListItem key='minting'>
-            <ListItemButton  component='a' href='#Minting' sx={{ 'text-align': 'center' }} key='Minting'>
+            <ListItemButton  component='a' href='#Minting' sx={{ textAlign: 'center' }} key='Minting'>
                 <ListItemText primary='Minting' />
             </ListItemButton>
           </ListItem>
@@ -47,7 +47,7 @@ function Menu() {
       <Divider />
       <List>
           <ListItem key='vision'>
-            <ListItemButton component='a' href='#Vision' sx={{ 'text-align': 'center' }} key='Vision'>
+            <ListItemButton component='a' href='#Vision' sx={{ textAlign: 'center' }} key='Vision'>
                 <ListItemText primary='Vision' />
             </ListItemButton>
           </ListItem>
@@ -55,7 +55,7 @@ function Menu() {
       <Divider />
       <List>
           <ListItem key='rarity'>
-            <ListItemButton component='a' href='#Rarity' sx={{ 'text-align': 'center' }} key='Rarity'>
+            <ListItemButton component='a' href='#Rarity' sx={{ textAlign: 'center' }} key='Rarity'>
                 <ListItemText primary='Rarity' />
             </ListItemButton>
           </ListItem>
@@ -63,7 +63,7 @@ function Menu() {
       <Divider />
       <List>
             <ListItem key='roadmap'>
-                <ListItemButton component='a' href='#Roadmap' sx={{ 'text-align': 'center' }} key='Roadmap'>
+                <ListItemButton component='a' href='#Roadmap' sx={{ textAlign: 'center' }} key='Roadmap'>
                     <ListItemText primary='Roadmap' />
                 </ListItemButton>  
             </ListItem>
@@ -71,7 +71,7 @@ function Menu() {
       <Divider />
       <List>
           <ListItem key='the team'>
-            <ListItemButton component='a' href='#TheTeam' sx={{ 'text-align': 'center' }} key='The Team'>
+            <ListItemButton component='a' href='#TheTeam' sx={{ textAlign: 'center' }} key='The Team'>
                 <ListItemText primary='The Team' />
             </ListItemButton>
           </ListItem>
@@ -79,7 +79,7 @@ function Menu() {
       <Divider />
       <List>
           <ListItem key='faq'>
-            <ListItemButton component='a' href='#FAQ' sx={{ 'text-align': 'center' }} key='FAQ'>
+            <ListItemButton component='a' href='#FAQ' sx={{ textAlign: 'center' }} key='FAQ'>
                 <ListItemText primary='FAQ' />
             </ListItemButton>
           </ListItem>

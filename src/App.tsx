@@ -67,7 +67,13 @@ const md = new MobileDetect(window.navigator.userAgent);
 
 function App() {
 
-  const [isDesktop] = useState(!md.phone() && !md.tablet);
+  const isPhone = md.phone();
+  const isTablet = md.tablet();
+  const [isDesktop] = useState(!isPhone && !isTablet);
+  console.log('phone: ', !md.phone())
+  console.log('tablet: ', !md.tablet())
+  console.log('isDesktop: ', !md.phone() && !md.tablet)
+  console.log('isDesktop: ',isDesktop)
 
   return (
     <ThemeProvider theme={theme}>
