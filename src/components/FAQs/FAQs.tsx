@@ -5,13 +5,17 @@ import { ExpandMore } from '@mui/icons-material';
 const useStyles: any = makeStyles((theme: any) => ({
     heading: {
         textAlign: 'center'
+    },
+    container: {
+        padding: 0,
+        maxWidth: 'unset'
     }
 }));
 
 function FAQs() {
     const classes = useStyles();
     return (
-        <Container>
+        <Container className={classes.container}>
             <Typography className={classes.heading} variant='h2' id='FAQ'>FAQs</Typography>
             <Accordion>
                 <AccordionSummary

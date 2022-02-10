@@ -1,5 +1,6 @@
 import { Container, Typography, Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import Line from './Line';
 
 const useStyles: any = makeStyles((theme: any) => ({
     worldUtopiaRoadmap: {
@@ -10,7 +11,8 @@ const useStyles: any = makeStyles((theme: any) => ({
         alignItems: 'center',
         display: 'flex !important',
         margin: '40px 0px',
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
+        maxWidth: 'unset'
     },
     number: {
         lineHeight: '41px',
@@ -41,7 +43,7 @@ const getRoadMapItem = (classes: any, text: string, number: number) => {
     )
 }
 
-function Roadmap() {
+function Roadmap({ isDesktop }: { isDesktop: boolean } ) {
     const classes = useStyles();
     const roadMapItems = [
         "As the name suggests we are here with the vision to create a better future. Our goal is to spread global awareness through our NFT project and work alongside credible non-profit organizations to improve our way of living. We can all relate/contribute to these issues, and our purpose is to be able to educate our community and act as a continuous support in building what we like to call a ‘better future’. We want to be able to release 10 total NFT projects all related to a specific global issue with 20% of initial sales & a further 5% of royalties to be donated to a charity relating to that issue. The first drop will consist of 10,000 NFTs all with unique characteristics and will connect us with the Ocean(Add in a statistic). ",
@@ -54,9 +56,12 @@ function Roadmap() {
     return (
         <Grid className={classes.roadMapContainer}>
             <Typography className={classes.worldUtopiaRoadmap} variant='h2' id='Roadmap'>World Utopia roadmap</Typography>
-            {roadMapItems.map((item, index) => 
-                getRoadMapItem(classes, item, ++index)
-            )}
+            <Grid>
+                {isDesktop && <Line />}
+                {roadMapItems.map((item, index) => 
+                    getRoadMapItem(classes, item, ++index)
+                )}
+            </Grid>
         </Grid>
     )
 }

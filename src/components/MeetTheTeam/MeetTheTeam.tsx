@@ -16,10 +16,7 @@ const useStyles: any = makeStyles((theme: any) => ({
     },
     itemContainer: {
         display: 'flex !important',
-        flexDirection: 'column-reverse',
-        // maxHeight: '250px',
-        // maxWidth: '250px',
-        // padding: '0'
+        flexDirection: 'column-reverse'
     },
     caption: {
         textAlign: 'center'
@@ -34,7 +31,7 @@ const useStyles: any = makeStyles((theme: any) => ({
         maxWidth: 'none !important'
     },
     teamGrid: {
-        justifyContent: 'center'
+        justifyContent: 'space-between'
     }
   }));
 

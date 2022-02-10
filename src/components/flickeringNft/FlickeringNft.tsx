@@ -1,8 +1,18 @@
+import { Typography, Grid } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 import { useEffect, useState } from "react";
 import { flickeringTime } from "../constants";
 
+const useStyles: any = makeStyles((theme: any) => ({
+    container: {
+        textAlign: 'center'
+    }
+}))
+
+
 function FlickeringNft() {
 
+    const classes = useStyles();
     const [imageIndex, setImageIndex] = useState(0);
 
     const images = [
@@ -32,10 +42,10 @@ function FlickeringNft() {
     }, [ imageIndex, setImageIndex ]);
 
     return (
-    <>
+    <Grid className={classes.container}>
         <img id='Rarity' alt='nft' src={images[imageIndex].src}></img>
-        <h3>{images[imageIndex].rarity}</h3>
-    </>
+        <Typography variant='h3'>{images[imageIndex].rarity}</Typography>
+    </Grid>
     )
 }
 export default FlickeringNft;

@@ -6,11 +6,8 @@ import SocialMedia from "../socialMedia/SocialMedia";
 
 const useStyles: any = makeStyles((theme: any) => ({
     mainNft: {
-        'max-width': '250px',
-        'max-height': '250px',
-        'min-width': '250px',
-        'min-height': '250px',
-        overflow: 'hidden'
+        width: '100%', 
+        height: 'auto'
     },
     welcome: {
         minWidth: '300px'
@@ -43,7 +40,9 @@ function MintYourNft() {
                     <Typography className={classes.welcome} variant='h1'>Welcome to World Utopia!</Typography>
                     <SocialMedia />
                 </Container>
-                <img className={classes.mainNft} alt='fish nft' src='seabums-nft.png' ></img>
+                <Grid>
+                    <img className={classes.mainNft} alt='fish nft' src='seabums-nft.png' ></img>
+                </Grid>
             </Grid>
             <Grid direction="column" className={classes.countdownContainer}>
                 <Countdown/>

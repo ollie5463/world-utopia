@@ -10,6 +10,11 @@ const useStyles:any = makeStyles((theme: any) => ({
     },
     logoContainer: {
         flexGrow: 4
+    },
+    menu: {
+        [theme.breakpoints.up('mobileMenuMaxWidth')]: {
+            display: 'none !important'
+        }
     }
 }))
 
@@ -83,17 +88,13 @@ function Menu() {
     )
 
     return (
-    <Grid display='flex' flexDirection='row-reverse' rowSpacing={1}>
-        {/* <Grid item spacing={2}> */}
+    <Grid className={classes.menu} display='flex' flexDirection='row-reverse' rowSpacing={1}>
         <Grid className={classes.logoContainer} >
             <Header styles={{ flex: 1 }}/>
         </Grid>
-        {/* </Grid> */}
-        {/* <Grid item spacing={1}> */}
             <Button className={classes.menuButton} onClick={toggleDrawer(true)}>
                 <MenuIcon fontSize='large'/>
             </Button>
-        {/* </Grid> */}
         <Drawer
             anchor='right'
             open={state}

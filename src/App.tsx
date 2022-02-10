@@ -12,16 +12,11 @@ import MintYourNftMobile from './components/mintYourNft/mobile/MintYourNft';
 import MintYourNft from './components/mintYourNft/MintYourNft';
 import OurVision from './components/ourVision/OurVision';
 import RarityScale from './components/RarityScale/RarityScale';
-import { Container, createTheme, Grid } from '@mui/material';
-import { makeStyles } from '@mui/styles';
+import { createTheme, Grid } from '@mui/material';
+import ContentWrapper from './components/ContentWrapper';
 
-const useStyles: any = makeStyles((theme: any) => ({
-  widthRestrictionContainer: {
-      maxWidth: '1250px !important'
-  }
-}));
 
-const theme = createTheme({
+const theme = (createTheme as any)({
     typography: {
       fontFamily: 'Candal, sans-serif;',
       h1: {
@@ -31,6 +26,18 @@ const theme = createTheme({
       h2: {
         fontSize: '30px',
         fontWeight: 'bold'
+      }
+    },
+    breakpoints: {
+      values: {
+        roadMapMaxWidthDesktop: 1110,
+        mobileMenuMaxWidth: 765,
+        contentWrapperMaxWidth: 1400,
+        xs: 0,
+        sm: 600,
+        md: 900,
+        lg: 1200,
+        xl: 1536,
       }
     },
     palette: {
@@ -53,22 +60,22 @@ const theme = createTheme({
 function App() {
 
   console.log(theme)
-  const [isDesktop, setIsDesktop] = useState(false);
-  const classes = useStyles();
+  const [isDesktop, setIsDesktop] = useState(true);
 
   return (
     <ThemeProvider theme={theme}>
-      <Grid > 
-        {/* className={classes.widthRestrictionContainer}> */}
-        {/* change to mobile menu when below certain width??????????? */}
-        {isDesktop ? <Menu/> : <MobileMenu/> }
+      <Grid>
+        <ContentWrapper>
+        <Menu/>
+        <MobileMenu/>
         {isDesktop ? <MintYourNft /> : <MintYourNftMobile /> }
-        <OurVision isDesktop={isDesktop} />
-        {isDesktop ? <RarityScale /> : <FlickeringNft/>}
-        <Roadmap/>
-        <MeetTheTeam isDesktop={isDesktop}/>
-        <FAQs/>
-        <SocialMedia />
+          <OurVision isDesktop={isDesktop} />
+          {isDesktop ? <RarityScale /> : <FlickeringNft/>}
+          <Roadmap isDesktop={isDesktop}/>
+          <MeetTheTeam isDesktop={isDesktop}/>
+          <FAQs/>
+          <SocialMedia />
+        </ContentWrapper>
       </Grid>
     </ThemeProvider>
   );

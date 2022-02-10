@@ -26,13 +26,18 @@ const useStyles:any = makeStyles((theme: any) => ({
             },
             whiteSpace:'nowrap'
         }
+    },
+    menu: {
+        [theme.breakpoints.down('mobileMenuMaxWidth')]: {
+            display: 'none !important'
+        }
     }
 }))
 
 function Menu() {
     const classes = useStyles();
     return (
-        <Grid>
+        <Grid className={classes.menu}>
             <List className={classes.desktopMenu}>
                 <ListItem className={classes.listItem} key='world utopia'>
                     <Header/>

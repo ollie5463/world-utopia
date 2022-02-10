@@ -10,21 +10,35 @@ const useStyles: any = makeStyles((theme: any) => ({
     },
     ourVisionContainer: {
         display: 'flex !important',
+        justifyContent: 'space-between',
         marginLeft: '0 !important',
-        margin: '100px 0'
+        margin: '100px 0',
+        [theme.breakpoints.down('md')]: {
+            flexDirection: 'column !important'
+        }
     },
     innerContainer: {
         maxWidth: '600px !important',
         padding: '0 !important',
         background: '#FF9D9D',
-        borderRadius: '34px'
+        borderRadius: '34px',
+        margin: 0
     },
     visionItemsContainer: {
         display: 'flex !important',
         flexWrap: 'nowrap',
+        paddingRight: '0px',
+        margin: 0,
+        [theme.breakpoints.down('md')]: {
+            margin: '50px 0',
+            maxWidth: '600px !important',
+            padding: '0 !important'
+        },
         flexDirection: 'column',
-        maxWidth: '465px !important',
-        minWidth: '465px !important'
+        [theme.breakpoints.up('md')]: {
+            maxWidth: '465px !important',
+            minWidth: '465px !important'
+        },
     }
 }));
 
