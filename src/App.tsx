@@ -2,7 +2,6 @@ import { ThemeProvider } from '@mui/material/styles';
 import { createTheme, Grid } from '@mui/material';
 import { useState } from 'react';
 import MobileDetect from 'mobile-detect';
-import './App.css';
 
 import FAQs from './components/FAQs/FAQs';
 import FlickeringNft from './components/flickeringNft/FlickeringNft';
@@ -49,16 +48,16 @@ const theme = (createTheme as any)({
     },
     palette: {
       primary: {
-        light: '#FF9D9D',
-        main: '#FF9D9D',
-        dark: '#FF9D9D',
-        contrastText: '#FFFFF'
+        light: '#E7FF00',
+        main: '#E7FF00',
+        dark: '#E7FF00',
+        contrastText: '#1D1D1B'
       },
       secondary: {
-        light: '#FF9D9D',
-        main: '#FF9D9D',
-        dark: '#FF9D9D',
-        contrastText: '#FFFFF'
+        light: '#E7FF00',
+        main: '#E7FF00',
+        dark: '#E7FF00',
+        contrastText: '#1D1D1B'
 
       }
     }
@@ -70,10 +69,6 @@ function App() {
   const isPhone = md.phone();
   const isTablet = md.tablet();
   const [isDesktop] = useState(!isPhone && !isTablet);
-  console.log('phone: ', !md.phone())
-  console.log('tablet: ', !md.tablet())
-  console.log('isDesktop: ', !md.phone() && !md.tablet)
-  console.log('isDesktop: ',isDesktop)
 
   return (
     <ThemeProvider theme={theme}>

@@ -7,7 +7,8 @@ type Props = {
 
 const useStyles: any = makeStyles(({
     fact: {
-        background: '#FF9D9D',
+        background: '#E7FF00',
+        color: '#1D1D1B',
         borderRadius: '34px',
         maxWidth: '200px !important',
         padding: '20px !important'
@@ -22,7 +23,7 @@ function OurVisionFacts({ facts }: Props) {
     <>
         {facts.map((item, index) => {
             const isOdd = index % 2;
-            return <Container sx={{ marginLeft: isOdd ? 0 : 'auto', marginRight: isOdd ? 'auto' : 0 }} className={classes.fact}>
+            return <Container key={index} sx={{ marginLeft: isOdd ? 0 : 'auto', marginRight: isOdd ? 'auto' : 0 }} className={classes.fact}>
                     <Typography variant='body1'>{item}</Typography>
                 </Container>
         }

@@ -1,4 +1,3 @@
-import '../App.css';
 import svg from './worldUtopiaLogo.svg';
 
 function Header(styles: any) {

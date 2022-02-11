@@ -5,10 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background: blue; */
   background: #1D1D1B;
   color: white;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -22,26 +22,6 @@ code {
   flex: 1;
 }
 
-.flex-box-container {
-  display: flex;
-  justify-content: center;
-  /* // desktop only */
-  flex-wrap: nowrap;
-}
-/* // desktop only */
-@media screen { 
-  
-}
-.wallet-button {
-  /* margin: 0 20%; */
-  max-width: 287px;
-}
-
-a:hover {
-  background-color: #0fe9ab;
-}
-
-.list {
-  margin-bottom: 40px;
-  padding: 0 36px;
+#root {
+  overflow-x: hidden;
 }

@@ -1,5 +1,4 @@
-import '../App.css';
-import { List, ListItem, ListItemButton, ListItemText, Typography } from "@mui/material";
+import { List, ListItem, Typography } from "@mui/material";
 import { makeStyles } from '@mui/styles';
 
 type ListItems = string[]

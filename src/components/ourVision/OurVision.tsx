@@ -20,7 +20,8 @@ const useStyles: any = makeStyles((theme: any) => ({
     innerContainer: {
         maxWidth: '600px !important',
         padding: '0 !important',
-        background: '#FF9D9D',
+        background: '#E7FF00',
+        color: '#1D1D1B',
         borderRadius: '34px',
         margin: 0,
         [theme.breakpoints.down('md')]: {
@@ -64,14 +65,12 @@ function OurVision({ isDesktop }: Props) {
                 ]} />
             </Container>
             <Container className={classes.visionItemsContainer}>
-            {isDesktop && 
                 <OurVisionFacts facts={[
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
                     'aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
                     'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint',
                     'occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
                 ]}/>
-            }
             </Container>
         </Grid>
     )
