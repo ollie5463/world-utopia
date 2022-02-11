@@ -10,7 +10,8 @@ const useStyles: any = makeStyles((theme: any) => ({
         height: 'auto'
     },
     welcome: {
-        minWidth: '300px'
+        minWidth: '300px',
+        margin: '0 auto'
     },
     container: {
         display: 'flex !important',

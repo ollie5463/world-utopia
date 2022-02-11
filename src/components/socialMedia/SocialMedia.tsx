@@ -1,26 +1,42 @@
-import './SocialMedia.css';
-import { IconButton } from '@mui/material';
+import { IconButton, Grid } from '@mui/material';
+import { makeStyles } from "@mui/styles";
 import { Instagram, Twitter } from '@mui/icons-material';
 import { useCallback } from 'react';
 
-function SocialMedia() {
+const useStyles: any = makeStyles((theme: any) => ({
+    icon: {
+        color: 'white'
+    },
+    discord: {
+        maxWidth: '40px',
+        maxHeight: '40px'
+    },
+    container: {
+        display: 'flex',
+        justifyContent: 'space-around',
+        maxWidth: '60%',
+        margin: '14px auto'
+    }
+  }));
 
+function SocialMedia() {
+    const classes = useStyles();
     const onClick = useCallback(() => {
         window.open('https://www.instagram.com/olliebannister/');
     }, [])
 
     return (
-        <div className='social-media-container'>
+        <Grid className={classes.container}>
             <IconButton onClick={onClick}>
-                <Instagram fontSize='large'/>
+                <Instagram className={classes.icon} fontSize='large'/>
             </IconButton>
             <IconButton onClick={onClick}>
-                <Twitter fontSize='large'/>
+                <Twitter className={classes.icon} fontSize='large'/>
             </IconButton>
             <IconButton onClick={onClick}>
-                <img className='social-media-link' alt='instagram' src='discord-icon.jpg'></img>
+                <img className={classes.discord} alt='discord button' src='discord.png'></img>
             </IconButton>
-        </div>
+        </Grid>
     )
 }
 

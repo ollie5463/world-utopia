@@ -3,4 +3,10 @@ Stuff left to do
 - Deployment
 - Colours
 - SSR
-- Fix errors in console
+- Scaling of NFT logo
+- Scaling of vision facts
+- Mobile!!!
+- FAQs margin
+- Margins between everything
+- Could play around with some CSS tricks
+- Slider needs some work
