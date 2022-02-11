@@ -14,7 +14,7 @@ const useStyles: any = makeStyles((theme: any) => ({
 function ConnectWalletButton() {
     const classes = useStyles();
 
-    const [isWalletConnected, setIsWalletConnected] = useState(false);
+    const [isWalletConnected] = useState(false); //, setIsWalletConnected
     
     const isMetaMaskInstalled = useCallback(() => {
         const { ethereum } = window as any;
@@ -29,6 +29,7 @@ function ConnectWalletButton() {
             const provider = await new ethers.providers.Web3Provider((window as any).ethereum, "any")
             await provider.send("eth_requestAccounts", [])
         } 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const mintNFT = useCallback(async () => {

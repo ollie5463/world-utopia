@@ -23,7 +23,7 @@ function OurVisionFacts({ facts }: Props) {
     <>
         {facts.map((item, index) => {
             const isOdd = index % 2;
-            return <Container key={index} sx={{ marginLeft: isOdd ? 0 : 'auto', marginRight: isOdd ? 'auto' : 0 }} className={classes.fact}>
+            return <Container key={index} sx={{ marginLeft: !isOdd ? 0 : 'auto', marginRight: !isOdd ? 'auto' : 0 }} className={classes.fact}>
                     <Typography variant='body1'>{item}</Typography>
                 </Container>
         }

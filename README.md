@@ -10,3 +10,4 @@ Stuff left to do
 - Margins between everything
 - Could play around with some CSS tricks
 - Slider needs some work
+- Headings for vision facts

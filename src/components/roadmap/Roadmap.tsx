@@ -10,7 +10,7 @@ const useStyles: any = makeStyles((theme: any) => ({
         justifyContent: 'space-around',
         alignItems: 'center',
         display: 'flex !important',
-        margin: '40px 0px',
+        margin: '60px 0px',
         flexWrap: 'wrap',
         maxWidth: 'unset',
         [theme.breakpoints.down('roadMapMaxWidthDesktop')]: {
@@ -37,8 +37,8 @@ const useStyles: any = makeStyles((theme: any) => ({
         margin: '100px 0 !important',
     },
     roadMapHeading: {
-        margin: 'auto',
-        textAlign: 'center'
+        marginRight: 'auto',
+        textAlign: 'left'
     },
     roadMapHeadingContainer: {
         padding: 0,
@@ -57,8 +57,8 @@ const useStyles: any = makeStyles((theme: any) => ({
 const getRoadMapItem = (classes: any, title: string, text: string, number: number) => {
     const isOdd = number % 2;
     return (
-        <Container key={title} className={classes.roadmapItemContainer} sx={{ flexDirection: isOdd? 'row': 'row-reverse' }}>
-            <Container className={classes.number} sx={{ marginLeft: isOdd ? 'auto' : '40px', marginRight: isOdd ? '40px' : 'auto' }} >{number}</Container>
+        <Container key={title} className={classes.roadmapItemContainer} sx={{ flexDirection: !isOdd? 'row': 'row-reverse' }}>
+            <Container className={classes.number} sx={{ marginLeft: !isOdd ? 'auto' : '40px', marginRight: !isOdd ? '40px' : 'auto' }} >{number}</Container>
             <Container className={classes.roadMapHeadingContainer}>
                 <Typography className={classes.roadMapHeading} variant='h3'>{title}</Typography>
                 <Typography className={classes.roadMapText} variant='body1'>{text}</Typography>
