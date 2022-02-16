@@ -11,7 +11,7 @@ const useStyles: any = makeStyles((theme: any) => ({
   outerContainer: {
     display: "flex !important",
     maxWidth: "none !important",
-    margin: "100px 0",
+    // margin: "100px 0",
     flexDirection: 'column',
     maxHeight: "600px",
   },
