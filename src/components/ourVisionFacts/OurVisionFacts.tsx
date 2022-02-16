@@ -5,13 +5,16 @@ type Props = {
     facts: string[]
 }
 
-const useStyles: any = makeStyles(({
+const useStyles: any = makeStyles((theme: any) => ({
     fact: {
         background: '#E7FF00',
         color: '#1D1D1B',
         borderRadius: '34px',
         maxWidth: '200px !important',
-        padding: '20px !important'
+        padding: '20px !important',
+        [theme.breakpoints.down('roadMapMobile')]: {
+            marginBottom: '40px'
+        }
     }
 }));
 
