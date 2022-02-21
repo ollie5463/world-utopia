@@ -47,18 +47,11 @@ const theme = (createTheme as any)({
   },
   palette: {
     primary: {
-      light: "#E7FF00",
-      main: "#E7FF00",
+      light: "#3F3C3D",
+      main: "#3F3C3D",
       dark: "#3F3C3D",
       contrastText: "black",
     },
-    // secondary: {
-    //   light: '#E7FF00',
-    //   main: '#E7FF00',
-    //   dark: '#E7FF00',
-    //   contrastText: '#1D1D1B'
-
-    // }
   },
 });
 const md = new MobileDetect(window.navigator.userAgent);
