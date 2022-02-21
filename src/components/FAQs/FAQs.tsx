@@ -6,7 +6,7 @@ const useStyles: any = makeStyles((theme: any) => ({
     heading: {
         textAlign: 'center',
         [theme.breakpoints.down('md')]: {
-            margin: "40px 0 !important",
+            marginBottom: "40px !important",
             fontSize: '45px'
           }
     },

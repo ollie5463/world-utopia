@@ -6,7 +6,7 @@ const useStyles: any = makeStyles((theme: any) => ({
     countdown: {
         fontSize: '90px !important',
         [theme.breakpoints.down('md')]: {
-            fontSize: '50px !important'
+            fontSize: '45px !important'
         },
         margin: '40px 0 !important'
     }

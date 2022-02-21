@@ -11,6 +11,7 @@ const useStyles: any = makeStyles((theme: any) => ({
     maxWidth: "none !important",
     flexDirection: 'column',
     maxHeight: "600px",
+    padding: '0 20px'
   },
   rarityTitle: {
     textAlign: "center",
