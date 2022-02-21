@@ -9,13 +9,13 @@ const useStyles: any = makeStyles((theme: any) => ({
   outerContainer: {
     display: "flex !important",
     maxWidth: "none !important",
-    // margin: "100px 0",
     flexDirection: 'column',
     maxHeight: "600px",
   },
   rarityTitle: {
     textAlign: "center",
     margin: "80px 0 !important",
+    fontSize: '45px !important'
   },
   mobileImage: {
     width: "100%",

@@ -44,7 +44,10 @@ const useStyles: any = makeStyles((theme: any) => ({
     },
     roadMapHeading: {
         marginRight: 'auto',
-        textAlign: 'left'
+        textAlign: 'left',
+        [theme.breakpoints.down('md')]: {
+            fontSize: '30px'
+        }
     },
     roadMapHeadingContainer: {
         padding: 0,
