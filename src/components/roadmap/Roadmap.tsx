@@ -4,7 +4,11 @@ import Line from './Line';
 
 const useStyles: any = makeStyles((theme: any) => ({
     worldUtopiaRoadmap: {
-        textAlign: 'center'
+        textAlign: 'center',
+        [theme.breakpoints.down('md')]:{
+            fontSize: '45px',
+            margin: '40px 0'
+        },
     },
     roadmapItemContainer: {
         justifyContent: 'space-around',
@@ -15,7 +19,7 @@ const useStyles: any = makeStyles((theme: any) => ({
         maxWidth: 'unset',
         [theme.breakpoints.down('roadMapMaxWidthDesktop')]: {
             flexDirection: 'column',
-            margin: '80px 0px'
+            margin: '60px 0px'
 
         }
     },
@@ -34,7 +38,9 @@ const useStyles: any = makeStyles((theme: any) => ({
         }
     },
     roadMapContainer: {
-        margin: '100px 0 !important',
+        [theme.breakpoints.up('md')]: {
+            margin: '100px 0 !important'
+        }
     },
     roadMapHeading: {
         marginRight: 'auto',
@@ -46,6 +52,7 @@ const useStyles: any = makeStyles((theme: any) => ({
             flexDirection: 'column',
             maxWidth: '650px'
         },
+        
         maxWidth: '400px',
         display: 'flex',
         flexDirection: 'column',

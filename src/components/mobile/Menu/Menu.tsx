@@ -15,6 +15,9 @@ const useStyles:any = makeStyles((theme: any) => ({
         [theme.breakpoints.up('mobileMenuMaxWidth')]: {
             display: 'none !important'
         }
+    },
+    menuIcon: {
+        color: 'black'
     }
 }))
 
@@ -93,7 +96,7 @@ function Menu() {
             <Header styles={{ flex: 1 }}/>
         </Grid>
             <Button className={classes.menuButton} onClick={toggleDrawer(true)}>
-                <MenuIcon fontSize='large'/>
+                <MenuIcon className={classes.menuIcon} fontSize='large'/>
             </Button>
         <Drawer
             anchor='right'

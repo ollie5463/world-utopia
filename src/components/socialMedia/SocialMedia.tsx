@@ -5,11 +5,13 @@ import { useCallback } from 'react';
 
 const useStyles: any = makeStyles((theme: any) => ({
     icon: {
-        color: 'white'
+        color: 'black',
+        width: '50px',
+        height: '50px'
     },
     discord: {
-        maxWidth: '40px',
-        maxHeight: '40px'
+        maxWidth: '60px',
+        maxHeight: '60px'
     },
     container: {
         display: 'flex',
@@ -34,7 +36,7 @@ function SocialMedia() {
                 <Twitter className={classes.icon} fontSize='large'/>
             </IconButton>
             <IconButton onClick={onClick}>
-                <img className={classes.discord} alt='discord button' src='discord.png'></img>
+                <img className={classes.discord} alt='discord button' src='discord-black-icon.png'></img>
             </IconButton>
         </Grid>
     )

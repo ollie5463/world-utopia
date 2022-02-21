@@ -11,6 +11,10 @@ const useStyles: any = makeStyles((theme: any) => ({
   meetTheTeamTitle: {
     textAlign: "center",
     margin: "100px 0 !important",
+    [theme.breakpoints.down('md')]: {
+      margin: "40px 0 !important",
+      fontSize: '45px'
+    }
   },
   itemContainer: {
     display: "flex !important",
@@ -22,7 +26,9 @@ const useStyles: any = makeStyles((theme: any) => ({
   outerContainer: {
     display: "flex !important",
     maxWidth: "none !important",
-    margin: "100px 0",
+    [theme.breakpoints.up('md')]: {
+      margin: "100px 0"
+    }
   },
   innerContainer: {
     display: "flex !important",
@@ -92,27 +98,27 @@ function MeetTheTeam({ isDesktop }: { isDesktop: boolean }) {
     {
       name: "Ollie",
       image:
-        "https://global-uploads.webflow.com/6187b67bc438f36537f3ec15/6193476a64b7ed0f2f0bd0f4_Untitled-1.png",
+        "shark-nft.png",
     },
     {
       name: "Joe",
       image:
-        "https://global-uploads.webflow.com/6187b67bc438f36537f3ec15/61934af77a6e4037059e5cf8_02.png",
+        "dolphin-nft.png",
     },
     {
       name: "Baiden",
       image:
-        "https://global-uploads.webflow.com/6187b67bc438f36537f3ec15/6193533234b645cee58f1e77_03.png",
+        "whale-nft.png",
     },
     {
       name: "Lew",
       image:
-        "https://global-uploads.webflow.com/6187b67bc438f36537f3ec15/61935782c4bb830bf46f8818_04.png",
+        "turtle-nft.png",
     },
     {
       name: "Max",
       image:
-        "https://global-uploads.webflow.com/6187b67bc438f36537f3ec15/61935782c4bb830bf46f8818_04.png",
+        "polar-bear-nft.png",
     },
   ];
 

@@ -15,7 +15,7 @@ function MintYourNft() {
     const classes = useStyles();
     return (
         <Grid display='flex' flexDirection='column' alignItems='center'>
-            <img className={classes.mainNft} alt='fish nft' src='seabums-nft.png' ></img>
+            <img className={classes.mainNft} alt='fish nft' src='whale-nft.png' ></img>
             <Countdown/>
             <ConnectWalletButton />
             <SocialMedia />

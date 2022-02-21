@@ -7,7 +7,13 @@ import { makeStyles } from '@mui/styles';
 const useStyles: any = makeStyles((theme: any) => ({
     connectWallet: {
         margin: '10px 0 !important',
-        maxWidth: '287px'
+        fontSize: '60px',
+        [theme.breakpoints.down('md')]: {
+            fontSize: '30px'
+        },
+        background: 'black',
+        color: 'white',
+        maxWidth: '80vw'
     }
 }));
 

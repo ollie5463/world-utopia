@@ -3,7 +3,7 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles: any = makeStyles((theme: any) => ({
     contentWrapper: {
-        margin: '0 20px',
+        padding: '0 20px',
         maxWidth: '1400px',
         [theme.breakpoints.up('contentWrapperMaxWidth')]: {
             margin: 'auto'
@@ -12,10 +12,10 @@ const useStyles: any = makeStyles((theme: any) => ({
   }));
   
 
-function ContentWrapper({ children }: {children: any}) {
+function ContentWrapper({ children, styles }: {children: any, styles?: any}) {
     const classes = useStyles();
     return (
-        <Grid className={classes.contentWrapper}>
+        <Grid style={styles} className={classes.contentWrapper}>
             {children}
         </Grid>
     )

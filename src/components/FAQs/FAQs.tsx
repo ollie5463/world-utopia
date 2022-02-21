@@ -4,11 +4,18 @@ import { ExpandMore } from '@mui/icons-material';
 
 const useStyles: any = makeStyles((theme: any) => ({
     heading: {
-        textAlign: 'center'
+        textAlign: 'center',
+        [theme.breakpoints.down('md')]: {
+            margin: "40px 0 !important",
+            fontSize: '45px'
+          }
     },
     container: {
         padding: 0,
-        maxWidth: 'unset'
+        maxWidth: 'unset',
+        [theme.breakpoints.down('md')]: {
+            padding: '0 20px'
+        }
     }
 }));
 

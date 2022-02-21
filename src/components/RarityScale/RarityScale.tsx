@@ -18,17 +18,26 @@ const useStyles: any = makeStyles((theme: any) => ({
   }));
 
 const itemList: {rarity: string, src: string}[] = [{
-        rarity: 'common',
-        src: 'https://global-uploads.webflow.com/6187b67bc438f36537f3ec15/6193476a64b7ed0f2f0bd0f4_Untitled-1.png',
+        rarity: 'CARBON',
+        src: 'monkey-nft.png',
     }, {
-        rarity: 'uncommon',
-        src: 'https://global-uploads.webflow.com/6187b67bc438f36537f3ec15/61934af77a6e4037059e5cf8_02.png',
+        rarity: 'EARTH',
+        src: 'penguin-nft.png',
     }, {
-        rarity: 'rare',
-        src: 'https://global-uploads.webflow.com/6187b67bc438f36537f3ec15/6193533234b645cee58f1e77_03.png',
+        rarity: 'WIND',
+        src: 'polar-bear-nft.png',
     }, {
-        rarity: 'legendary',
-        src: 'https://global-uploads.webflow.com/6187b67bc438f36537f3ec15/61935782c4bb830bf46f8818_04.png'
+        rarity: 'FIRE',
+        src: 'turtle-nft.png'
+    }, {
+        rarity: 'BRONZE',
+        src: 'whale-nft.png'
+    }, {
+        rarity: 'SILVER',
+        src: 'dolphin-nft.png'
+    }, {
+        rarity: 'GOLD',
+        src: 'shark-nft.png'
     }];
 
 function RarityScale() {
