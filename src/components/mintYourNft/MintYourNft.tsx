@@ -1,7 +1,6 @@
 import { Container, Typography, Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import ConnectWalletButton from "../ConnectWalletButton";
-import ContentWrapper from "../ContentWrapper";
 import Countdown from "../Countdown";
 import SocialMedia from "../socialMedia/SocialMedia";
 
