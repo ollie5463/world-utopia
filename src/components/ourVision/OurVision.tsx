@@ -71,11 +71,19 @@ function OurVision({ isDesktop }: Props) {
         </Container>
         <Container className={classes.visionItemsContainer}>
           <OurVisionFacts
-            facts={[
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
-                "aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint",
-                "occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+            facts={[{
+              heading: '$120,021',
+              fact: 'Donated to date for Ocean Conservation. Every $1 donated equals 1 pound of trash removed from the Seas.'
+            },{
+              heading: '20%',
+              fact: 'Donated from Initial Mint to our Charity Partners'
+            },{
+              heading: '13,708+',
+              fact: 'Members in our Discord. A friendly, fun, positive place, aka "the best community on the internet"'
+            },{
+              heading: '$120,021',
+              fact: 'Donated to date for Ocean Conservation. Every $1 donated equals 1 pound of trash removed from the Seas.'
+            }
             ]}
             />
         </Container>

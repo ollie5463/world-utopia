@@ -2,7 +2,7 @@ import { Container, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 type Props = {
-    facts: string[]
+    facts: { heading: string, fact: string }[]
 }
 
 const useStyles: any = makeStyles((theme: any) => ({
@@ -24,10 +24,13 @@ function OurVisionFacts({ facts }: Props) {
 
     return (
     <>
-        {facts.map((item, index) => {
+        {Object.entries(facts).map((entry, index) => {
             const isOdd = index % 2;
+            console.log(entry)
+            const { heading, fact } = entry[1];
             return <Container key={index} sx={{ marginLeft: !isOdd ? 0 : 'auto', marginRight: !isOdd ? 'auto' : 0 }} className={classes.fact}>
-                    <Typography variant='body1'>{item}</Typography>
+                    <Typography variant='h4'>{heading}</Typography>
+                    <Typography variant='body1'>{fact}</Typography>
                 </Container>
         }
         )}

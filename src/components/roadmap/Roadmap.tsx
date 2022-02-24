@@ -5,8 +5,8 @@ import Line from './Line';
 const useStyles: any = makeStyles((theme: any) => ({
     worldUtopiaRoadmap: {
         textAlign: 'center',
-        // fontSize: '45px',
         [theme.breakpoints.down('md')]:{
+            fontSize: '45px',
             margin: '40px 0'
         },
     },
