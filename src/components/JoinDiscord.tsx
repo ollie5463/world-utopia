@@ -23,7 +23,7 @@ function JoinDiscord() {
     }, [])
 
     return (
-        <Button id='Minting' className={classes.openDiscord} variant="contained" onClick={openDiscord} >Join our Discord!</Button>   
+        <Button id='minting' className={classes.openDiscord} variant="contained" onClick={openDiscord} >Join our Discord!</Button>   
     )
 }
 

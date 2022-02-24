@@ -23,7 +23,7 @@ function FAQs() {
     const classes = useStyles();
     return (
         <Container className={classes.container}>
-            <Typography className={classes.heading} variant='h2' id='FAQ'>FAQs</Typography>
+            <Typography className={classes.heading} variant='h2' id='faq'>FAQs</Typography>
             <Accordion>
                 <AccordionSummary
                     expandIcon={<ExpandMore />}

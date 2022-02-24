@@ -43,32 +43,32 @@ function Menu() {
                     <Header/>
                 </ListItem>
                 <ListItem className={classes.listItem} key='minting'>
-                <ListItemButton  component='a' href='#Minting' sx={{ textAlign: 'center' }} key='Minting'>
+                <ListItemButton  component='a' href='#minting' sx={{ textAlign: 'center' }} key='Minting'>
                     <ListItemText className={classes.listItemText} primary='Minting' />
                 </ListItemButton>
                 </ListItem>
                 <ListItem className={classes.listItem} key='vision'>
-                    <ListItemButton component='a' href='#Vision' sx={{ textAlign: 'center' }} key='Vision'>
+                    <ListItemButton component='a' href='#vision' sx={{ textAlign: 'center' }} key='Vision'>
                         <ListItemText className={classes.listItemText} primary='Vision' />
                     </ListItemButton>
                 </ListItem>
                 <ListItem className={classes.listItem} key='rarity'>
-                    <ListItemButton component='a' href='#Rarity' sx={{ textAlign: 'center' }} key='Rarity'>
+                    <ListItemButton component='a' href='#rarity' sx={{ textAlign: 'center' }} key='Rarity'>
                         <ListItemText className={classes.listItemText} primary='Rarity' />
                     </ListItemButton>
                 </ListItem>
                 <ListItem className={classes.listItem} key='roadmap'>
-                    <ListItemButton component='a' href='#Roadmap' sx={{ textAlign: 'center' }} key='Roadmap'>
+                    <ListItemButton component='a' href='#roadmap' sx={{ textAlign: 'center' }} key='Roadmap'>
                         <ListItemText className={classes.listItemText} primary='Roadmap' />
                     </ListItemButton>  
                 </ListItem>
                 <ListItem className={classes.listItem} key='the team'>
-                    <ListItemButton component='a' href='#TheTeam' sx={{ textAlign: 'center' }} key='The Team'>
+                    <ListItemButton component='a' href='#theteam' sx={{ textAlign: 'center' }} key='The Team'>
                         <ListItemText className={classes.listItemText} primary='The Team' />
                     </ListItemButton>
                 </ListItem>
                 <ListItem className={classes.listItem} key='faq'>
-                    <ListItemButton component='a' href='#FAQ' sx={{ textAlign: 'center' }} key='FAQ'>
+                    <ListItemButton component='a' href='#faq' sx={{ textAlign: 'center' }} key='FAQ'>
                         <ListItemText className={classes.listItemText} primary='FAQ' />
                     </ListItemButton>
                 </ListItem>

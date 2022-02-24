@@ -77,7 +77,7 @@ function FlickeringNft() {
     }];
   return (
     <Grid className={classes.outerContainer}>
-      <Typography id='Rarity' className={classes.rarityTitle} variant="h2">
+      <Typography id='rarity' className={classes.rarityTitle} variant="h2">
         Rarity Scale!
       </Typography>
       <Carousel

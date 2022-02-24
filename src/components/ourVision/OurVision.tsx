@@ -59,7 +59,7 @@ function OurVision({ isDesktop }: Props) {
 
       <Grid className={classes.ourVisionContainer}>
         <Container className={classes.innerContainer}>
-          <Typography id="Vision" className={classes.ourVision} variant="h3">
+          <Typography id="vision" className={classes.ourVision} variant="h3">
             Our Vision
           </Typography>
           <VisionList

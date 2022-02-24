@@ -44,7 +44,7 @@ function RarityScale() {
     const classes = useStyles();
     return (
         <Grid className={classes.rarityContainer}>
-            <Typography className={classes.rarityTitle} id='Rarity' variant='h2' >Rarity Scale</Typography>
+            <Typography className={classes.rarityTitle} id='rarity' variant='h2' >Rarity Scale</Typography>
             <ImageList className={classes.rarityImage} cols={itemList.length}>
                 {
                     itemList.map(({rarity, src}) => (

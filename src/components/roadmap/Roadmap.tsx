@@ -109,7 +109,7 @@ function Roadmap({ isDesktop }: { isDesktop: boolean } ) {
 ]
     return (
         <Grid className={classes.roadMapContainer}>
-            <Typography className={classes.worldUtopiaRoadmap} variant='h2' id='Roadmap'>World Utopia roadmap</Typography>
+            <Typography className={classes.worldUtopiaRoadmap} variant='h2' id='roadmap'>World Utopia roadmap</Typography>
             <Grid>
                 {isDesktop && <Line />}
                 {roadMapItems.map(({title, text}, index) => 

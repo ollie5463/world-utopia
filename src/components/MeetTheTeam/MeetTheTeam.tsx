@@ -127,7 +127,7 @@ function MeetTheTeam({ isDesktop }: { isDesktop: boolean }) {
       <Typography
         className={classes.meetTheTeamTitle}
         variant="h2"
-        id="TheTeam"
+        id="theteam"
       >
         Meet the team!
       </Typography>

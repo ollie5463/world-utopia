@@ -52,7 +52,7 @@ function ConnectWalletButton() {
     };
 
     return (
-        <Button id='Minting' className={classes.connectWallet} variant="contained" onClick={isWalletConnected ? mintNFTProps.onClick : connectMaskProps.onClick} >{isWalletConnected? mintNFTProps.text : connectMaskProps.text}</Button>   
+        <Button id='minting' className={classes.connectWallet} variant="contained" onClick={isWalletConnected ? mintNFTProps.onClick : connectMaskProps.onClick} >{isWalletConnected? mintNFTProps.text : connectMaskProps.text}</Button>   
     )
 }
 
