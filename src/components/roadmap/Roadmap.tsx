@@ -5,14 +5,16 @@ import Line from './Line';
 const useStyles: any = makeStyles((theme: any) => ({
     worldUtopiaRoadmap: {
         textAlign: 'center',
+        // fontSize: '45px',
         [theme.breakpoints.down('md')]:{
-            fontSize: '45px',
             margin: '40px 0'
         },
     },
     roadmapItemContainer: {
         justifyContent: 'space-around',
         alignItems: 'center',
+        // transform: "scale(1)",
+        // animation: "$fade 3s infinite",
         display: 'flex !important',
         margin: '60px 0px',
         flexWrap: 'wrap',
@@ -21,7 +23,15 @@ const useStyles: any = makeStyles((theme: any) => ({
             flexDirection: 'column',
             margin: '60px 0px'
 
-        }
+        },
+        // "@keyframes fade": {
+        //     '0%': {
+        //         opacity: 0
+        //     },
+        //     '100%': {
+        //         opacity: 1
+        //     }
+        // }
     },
     number: {
         lineHeight: '41px',
@@ -50,17 +60,27 @@ const useStyles: any = makeStyles((theme: any) => ({
         }
     },
     roadMapHeadingContainer: {
+        animation: "$pulse 2s ease-in",
+        transform: 'scale(1)',
+        opacity: 1,
         padding: 0,
         [theme.breakpoints.down('roadMapMaxWidthDesktop')]: {
             flexDirection: 'column',
             maxWidth: '650px'
         },
-        
         maxWidth: '400px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-end',
-        margin: 0
+        margin: 0,
+    },
+    "@keyframes pulse": {
+        '0%': {
+            opacity: 0
+        },
+        '100%': {
+            opacity: 1
+        }
     }
   }));
 

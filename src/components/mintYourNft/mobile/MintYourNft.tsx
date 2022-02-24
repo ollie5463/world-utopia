@@ -1,8 +1,10 @@
 import { makeStyles } from "@mui/styles";
 import { Grid } from '@mui/material';
+import { useAppContext } from "../../../hooks";
 import ConnectWalletButton from "../../ConnectWalletButton";
 import Countdown from "../../Countdown";
 import SocialMedia from "../../socialMedia/SocialMedia";
+import JoinDiscord from "../../JoinDiscord";
 
 const useStyles: any = makeStyles((theme: any) => ({
     mainNft: {
@@ -13,11 +15,12 @@ const useStyles: any = makeStyles((theme: any) => ({
 
 function MintYourNft() {
     const classes = useStyles();
+    const { shouldShowConnectWallet } = useAppContext();
     return (
         <Grid display='flex' flexDirection='column' alignItems='center'>
-            <img className={classes.mainNft} alt='fish nft' src='whale-nft.png' ></img>
+            <img className={classes.mainNft} alt='whale nft' src='whale-nft.png' ></img>
             <Countdown/>
-            <ConnectWalletButton />
+            {shouldShowConnectWallet ? <ConnectWalletButton /> : <JoinDiscord />}
             <SocialMedia />
         </Grid>
     )

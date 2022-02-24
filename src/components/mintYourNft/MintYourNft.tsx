@@ -1,7 +1,9 @@
 import { Container, Typography, Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import { useAppContext } from "../../hooks";
 import ConnectWalletButton from "../ConnectWalletButton";
 import Countdown from "../Countdown";
+import JoinDiscord from "../JoinDiscord";
 import SocialMedia from "../socialMedia/SocialMedia";
 
 const useStyles: any = makeStyles((theme: any) => ({
@@ -17,6 +19,7 @@ const useStyles: any = makeStyles((theme: any) => ({
   welcome: {
     minWidth: "300px",
     margin: "20px auto",
+    textAlign: 'center',
     [theme.breakpoints.down("md")]: {
       fontSize: "50px",
     },
@@ -43,6 +46,7 @@ const useStyles: any = makeStyles((theme: any) => ({
 
 function MintYourNft() {
   const classes = useStyles();
+  const { shouldShowConnectWallet } = useAppContext();
   return (
     <>
       <Grid flexDirection="column-reverse" className={classes.container}>
@@ -58,9 +62,9 @@ function MintYourNft() {
           src="whale-nft.png"
         ></img>
       </Grid>
-      <Grid /*direction="column" */ className={classes.countdownContainer}>
+      <Grid className={classes.countdownContainer}>
         <Countdown />
-        <ConnectWalletButton />
+        {shouldShowConnectWallet ? <ConnectWalletButton /> : <JoinDiscord/>}
       </Grid>
     </>
   );

@@ -20,15 +20,15 @@ const theme = (createTheme as any)({
   typography: {
     fontFamily: "Candal, sans-serif;",
     h1: {
-      fontSize: "60px",
+      fontSize: "65px",
       fontWeight: "bold",
     },
     h2: {
-      fontSize: "30px",
+      fontSize: "60px",
       fontWeight: "bold",
     },
     h3: {
-      fontSize: "25px",
+      fontSize: "45px",
       fontWeight: "bold",
     },
   },

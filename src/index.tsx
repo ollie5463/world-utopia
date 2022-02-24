@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import config from './config';
+import { AppContext } from './hooks';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppContext.Provider value={config}>
+      <App />
+    </AppContext.Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

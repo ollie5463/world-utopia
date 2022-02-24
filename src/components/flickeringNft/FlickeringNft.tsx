@@ -39,7 +39,7 @@ const getItemCarouselItemMobile = (
   classes: any
 ) => {
   return (
-    <Grid sx={{ display: "flex", flexDirection: "column-reverse" }}>
+    <Grid key={name} sx={{ display: "flex", flexDirection: "column-reverse" }}>
       <Typography variant="h3" style={{ margin: "40px auto" }}>
         {name}
       </Typography>
