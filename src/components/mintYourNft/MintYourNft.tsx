@@ -10,11 +10,8 @@ const useStyles: any = makeStyles((theme: any) => ({
   mainNft: {
     width: "100%",
     height: "auto",
-    maxWidth: "500px",
-    [theme.breakpoints.down("md")]: {
-      maxWidth: "400px",
-    },
-    margin: "0 auto",
+    maxWidth: "400px",
+    margin: "0 auto"
   },
   welcome: {
     minWidth: "300px",

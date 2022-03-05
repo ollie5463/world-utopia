@@ -12,7 +12,7 @@ const useStyles: any = makeStyles((theme: any) => ({
     },
     container: {
         padding: 0,
-        maxWidth: 'unset',
+        maxWidth: '1000px',
         [theme.breakpoints.down('md')]: {
             padding: '0 20px'
         }

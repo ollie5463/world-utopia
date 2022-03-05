@@ -2,7 +2,7 @@ import { makeStyles } from "@mui/styles";
 
 const useStyles: any = makeStyles((theme: any) => ({
     line: {
-        height: '1500px',
+        height: '2200px',
         width: '6px',
         position: 'absolute',
         left: '50vw',

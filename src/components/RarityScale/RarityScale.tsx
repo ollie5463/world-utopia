@@ -47,6 +47,36 @@ const itemList: { rarity: string; src: string }[] = [
     src: "shark-nft.png",
   },
 ];
+const ribbonList: { rarity: string; src: string }[] = [
+  {
+    rarity: "CARBON",
+    src: "monkey-nft.png",
+  },
+  {
+    rarity: "EARTH",
+    src: "penguin-nft.png",
+  },
+  {
+    rarity: "WIND",
+    src: "polar-bear-nft.png",
+  },
+  {
+    rarity: "FIRE",
+    src: "turtle-nft.png",
+  },
+  {
+    rarity: "BRONZE",
+    src: "whale-nft.png",
+  },
+  {
+    rarity: "SILVER",
+    src: "dolphin-nft.png",
+  },
+  {
+    rarity: "GOLD",
+    src: "shark-nft.png",
+  },
+];
 
 function RarityScale() {
   const classes = useStyles();

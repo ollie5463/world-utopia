@@ -22,11 +22,12 @@ const useStyles: any = makeStyles((theme: any) => ({
   },
   caption: {
     textAlign: "center",
+    fontSize: '45px'
   },
   outerContainer: {
-    maxWidth: "none !important",
+    maxWidth: "1400px !important",
     [theme.breakpoints.up("md")]: {
-      margin: "100px 0",
+      margin: "100px auto",
     },
     '& .carousel': {
       marginRight: 'auto',

@@ -12,12 +12,21 @@ const useStyles: any = makeStyles((theme: any) => ({
     display: "flex !important",
     justifyContent: "space-between",
     marginLeft: "0 !important",
+    [theme.breakpoints.up('lg')]: {
+      marginLeft: 'auto !important',
+      marginRight: 'auto'
+    },
+    maxWidth: '1400px',
     padding: "100px 0",
-    background: "white",
     [theme.breakpoints.down("md")]: {
       padding: "80px 20px 0",
       flexDirection: "column !important",
     },
+  },
+  outerContainer: {
+    background: "white",
+    width: '100%',
+    maxWidth: 'unset'
   },
   innerContainer: {
     maxWidth: "600px !important",
@@ -56,7 +65,7 @@ function OurVision({ isDesktop }: Props) {
   const classes = useStyles();
 
   return (
-
+    <Container className={classes.outerContainer}>
       <Grid className={classes.ourVisionContainer}>
         <Container className={classes.innerContainer}>
           <Typography id="vision" className={classes.ourVision} variant="h3">
@@ -64,30 +73,35 @@ function OurVision({ isDesktop }: Props) {
           </Typography>
           <VisionList
             items={[
-                "As the name suggests we are here with the vision to create a better future. Our goal is to spread global awareness through our NFT project and work alongside credible non-profit organizations to improve our way of living. We can all relate/contribute to these issues, and our purpose is to be able to educate our community and act as a continuous support in building what we like to call a ‘better future’.",
-                "We want to be able to release 10 total NFT projects all related to a specific global issue with 20% of initial sales & a further 5% of royalties to be donated to a charity relating to that issue. The first drop will consist of 10,000 NFTs all with unique characteristics and will connect us with the Ocean(Add in a statistic).",
+              "As the name suggests we are here with the vision to create a better future. Our goal is to spread global awareness through our NFT project and work alongside credible non-profit organizations to improve our way of living. We can all relate/contribute to these issues, and our purpose is to be able to educate our community and act as a continuous support in building what we like to call a ‘better future’.",
+              "We want to be able to release 10 total NFT projects all related to a specific global issue with 20% of initial sales & a further 5% of royalties to be donated to a charity relating to that issue. The first drop will consist of 10,000 NFTs all with unique characteristics and will connect us with the Ocean(Add in a statistic).",
             ]}
-            />
+          />
         </Container>
         <Container className={classes.visionItemsContainer}>
           <OurVisionFacts
-            facts={[{
-              heading: '$120,021',
-              fact: 'Donated to date for Ocean Conservation. Every $1 donated equals 1 pound of trash removed from the Seas.'
-            },{
-              heading: '20%',
-              fact: 'Donated from Initial Mint to our Charity Partners'
-            },{
-              heading: '13,708+',
-              fact: 'Members in our Discord. A friendly, fun, positive place, aka "the best community on the internet"'
-            },{
-              heading: '$120,021',
-              fact: 'Donated to date for Ocean Conservation. Every $1 donated equals 1 pound of trash removed from the Seas.'
-            }
+            facts={[
+              {
+                heading: "$120,021",
+                fact: "Donated to date for Ocean Conservation. Every $1 donated equals 1 pound of trash removed from the Seas.",
+              },
+              {
+                heading: "20%",
+                fact: "Donated from Initial Mint to our Charity Partners",
+              },
+              {
+                heading: "13,708+",
+                fact: 'Members in our Discord. A friendly, fun, positive place, aka "the best community on the internet"',
+              },
+              {
+                heading: "$120,021",
+                fact: "Donated to date for Ocean Conservation. Every $1 donated equals 1 pound of trash removed from the Seas.",
+              },
             ]}
-            />
+          />
         </Container>
       </Grid>
+    </Container>
   );
 }
 export default OurVision;
