@@ -11,10 +11,10 @@ const useStyles: any = makeStyles((theme: any) => ({
   meetTheTeamTitle: {
     textAlign: "center",
     margin: "100px 0 !important",
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down("md")]: {
       margin: "40px 0 !important",
-      fontSize: '45px'
-    }
+      fontSize: "45px",
+    },
   },
   itemContainer: {
     display: "flex !important",
@@ -24,10 +24,13 @@ const useStyles: any = makeStyles((theme: any) => ({
     textAlign: "center",
   },
   outerContainer: {
-    display: "flex !important",
     maxWidth: "none !important",
-    [theme.breakpoints.up('md')]: {
-      margin: "100px 0"
+    [theme.breakpoints.up("md")]: {
+      margin: "100px 0",
+    },
+    '& .carousel': {
+      marginRight: 'auto',
+      marginLeft: 'auto'
     }
   },
   innerContainer: {
@@ -97,33 +100,32 @@ function MeetTheTeam({ isDesktop }: { isDesktop: boolean }) {
   const items: Item[] = [
     {
       name: "Ollie",
-      image:
-        "shark-nft.png",
+      image: "shark-nft.png",
     },
     {
       name: "Joe",
-      image:
-        "dolphin-nft.png",
+      image: "dolphin-nft.png",
     },
     {
       name: "Baiden",
-      image:
-        "whale-nft.png",
+      image: "whale-nft.png",
     },
     {
       name: "Lew",
-      image:
-        "turtle-nft.png",
+      image: "turtle-nft.png",
     },
     {
       name: "Max",
-      image:
-        "polar-bear-nft.png",
+      image: "polar-bear-nft.png",
     },
   ];
 
   return (
-    <Grid flexDirection="column" sx={{ maxHeight: isDesktop ? 'none' : '600px' }} className={classes.outerContainer}>
+    <Grid
+      flexDirection="column"
+      sx={{ maxHeight: isDesktop ? "none" : "600px" }}
+      className={classes.outerContainer}
+    >
       <Typography
         className={classes.meetTheTeamTitle}
         variant="h2"
@@ -133,8 +135,9 @@ function MeetTheTeam({ isDesktop }: { isDesktop: boolean }) {
       </Typography>
       {!isDesktop && (
         <Carousel
+          className="carousel"
           navButtonsAlwaysVisible
-          sx={{ "& > div": { height: "300px !important" } }}
+          sx={{ "& > div": { height: "300px !important" }, maxWidth: "400px" }}
         >
           {items.map((itemProps) =>
             getItemCarouselItemMobile(itemProps.name, itemProps.image, classes)

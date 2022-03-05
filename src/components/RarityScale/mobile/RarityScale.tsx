@@ -7,16 +7,19 @@ const useStyles: any = makeStyles((theme: any) => ({
     textAlign: "center",
   },
   outerContainer: {
-    display: "flex !important",
     maxWidth: "none !important",
-    flexDirection: 'column',
+    flexDirection: "column",
     maxHeight: "600px",
-    padding: '0 20px'
+    padding: "0 20px",
+    '& .carousel': {
+      marginLeft: 'auto',
+      marginRight: 'auto'
+    }
   },
   rarityTitle: {
     textAlign: "center",
     margin: "80px 0 !important",
-    fontSize: '45px !important'
+    fontSize: "45px !important",
   },
   mobileImage: {
     width: "100%",
@@ -40,7 +43,7 @@ const getItemCarouselItemMobile = (
 ) => {
   return (
     <Grid key={name} sx={{ display: "flex", flexDirection: "column-reverse" }}>
-      <Typography variant="h3" style={{ margin: "40px auto" }}>
+      <Typography variant="h3" style={{ margin: "40px auto", lineHeight: 1 }}>
         {name}
       </Typography>
       <Grid>
@@ -53,38 +56,48 @@ const getItemCarouselItemMobile = (
 function FlickeringNft() {
   const classes = useStyles();
 
- const images: Image[] = [{
-        rarity: 'CARBON',
-        src: 'monkey-nft.png',
-    }, {
-        rarity: 'EARTH',
-        src: 'penguin-nft.png',
-    }, {
-        rarity: 'WIND',
-        src: 'polar-bear-nft.png',
-    }, {
-        rarity: 'FIRE',
-        src: 'turtle-nft.png'
-    }, {
-        rarity: 'BRONZE',
-        src: 'whale-nft.png'
-    }, {
-        rarity: 'SILVER',
-        src: 'dolphin-nft.png'
-    }, {
-        rarity: 'GOLD',
-        src: 'shark-nft.png'
-    }];
+  const images: Image[] = [
+    {
+      rarity: "CARBON",
+      src: "monkey-nft.png",
+    },
+    {
+      rarity: "EARTH",
+      src: "penguin-nft.png",
+    },
+    {
+      rarity: "WIND",
+      src: "polar-bear-nft.png",
+    },
+    {
+      rarity: "FIRE",
+      src: "turtle-nft.png",
+    },
+    {
+      rarity: "BRONZE",
+      src: "whale-nft.png",
+    },
+    {
+      rarity: "SILVER",
+      src: "dolphin-nft.png",
+    },
+    {
+      rarity: "GOLD",
+      src: "shark-nft.png",
+    },
+  ];
   return (
     <Grid className={classes.outerContainer}>
-      <Typography id='rarity' className={classes.rarityTitle} variant="h2">
+      <Typography id="rarity" className={classes.rarityTitle} variant="h2">
         Rarity Scale!
       </Typography>
       <Carousel
+        className="carousel"
         duration={1000}
         navButtonsAlwaysVisible
         sx={{
           "& > div": { height: "300px !important" },
+          maxWidth: '400px'
         }}
       >
         {images.map((itemProps) =>
