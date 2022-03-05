@@ -4,7 +4,7 @@ import { useState } from "react";
 import MobileDetect from "mobile-detect";
 
 import FAQs from "./components/FAQs/FAQs";
-import FlickeringNft from "./components/rarityScale/mobile/RarityScale";
+import FlickeringNft from "./components/RarityScale/mobile/RarityScale";
 import MeetTheTeam from "./components/MeetTheTeam/MeetTheTeam";
 import MobileMenu from "./components/mobile/Menu/Menu";
 import Menu from "./components/menu/Menu";
@@ -13,7 +13,7 @@ import SocialMedia from "./components/socialMedia/SocialMedia";
 import MintYourNftMobile from "./components/mintYourNft/mobile/MintYourNft";
 import MintYourNft from "./components/mintYourNft/MintYourNft";
 import OurVision from "./components/ourVision/OurVision";
-import RarityScale from "./components/rarityScale/RarityScale";
+import RarityScale from "./components/RarityScale/RarityScale";
 import ContentWrapper from "./components/ContentWrapper";
 
 const theme = (createTheme as any)({
